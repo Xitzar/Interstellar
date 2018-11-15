@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="fibonacci.js"></script>
+    <script src="fibon.js"></script>
+    <script src="benchmark.js"></script>
+    <title>Suite de Fibonacci</title>
+    <style type="text/css">
+        #suite {
+            font-size:24px;
+            line-height: 32px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ** AFFICHAGE DE FIBONACCI --> 
+    <h1>La suite de Fibonacci</h1>
+    <div id="suite"></div>
+</body>
+<script>               
+    // fibonacci_tests
+    benchmark.test( fibon.run_tests );    
+    document.getElementById("suite").innerHTML = fibonacci.display(15);
+</script>
+</html>

@@ -1,30 +1,3 @@
-<style>
-
-    .tictactoe {
-        border:1px solid #000;   
-    }
-
-    .tictactoe .cell {
-        background-color: #DDD;
-    }
-
-    .tictactoe .board a {
-        display:inline-block;
-        line-height:30px;
-        font-size:30px;
-        background-color:#FFF;
-    }
-
-    .btn-start {
-        border: 1px solid red;
-        font-size:14px;
-        padding:10px 20px;
-        border-radius:6px;
-    }
-
-    #colophon {display:none;}
-
-</style>
 
 <section>
     <a href="javascript:;" class="btn btn-start">Démarrer une partie</a>
@@ -46,7 +19,7 @@
                 <?php for($y=0; $y<3; $y++): ?>
 
                     <td class="center">
-                        <a href="javascript:;" class=" px2 px7" data-x="<?php echo $x ?>" data-y="<?php echo $y ?>">
+                        <a href="javascript:;" class="case px2 px7" data-x="<?php echo $x ?>" data-y="<?php echo $y ?>">
                             <span class="cell_<?php echo $x."_".$y ?>">?</span>
                         </a>
                     </td>
@@ -58,6 +31,6 @@
         
 
     <div class="col-12 center result hide">
-        Le gagnant est : <span class="name"></span>
+        Le gagnant est : <span class="name"></span> <a href="javascript:;" class="btn btn-reset"><i class="fa fa-refresh" aria-hidden="true"></i> Reset</a>
     </div>
 </section>

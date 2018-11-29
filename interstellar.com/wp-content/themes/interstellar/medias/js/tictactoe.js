@@ -3,7 +3,7 @@ var TicTacToe = {
     board : [],
     joueurs : [],    
     currentPlayer : false,
-    winner : "",   
+    winner : false,   
     
     move : function(x,y) {
         
@@ -11,9 +11,18 @@ var TicTacToe = {
         movepiece = this.currentPlayer['piece'];        
         
         // mettre cette valeur à x,y dans le board
-        this.board[x][y] = movepiece;
-    },  
-
+        if(this.isUnclaimed(x,y)){
+            this.board[x][y] = movepiece;
+        }
+    },
+    isUnclaimed : function(x,y){
+        if(this.board[x][y] == 30){
+            return true;
+        }
+        else{
+            return false;
+        }
+    },
     initPlayer : function(name, piece) {
         var joueur = {
             "name" : name,
@@ -26,6 +35,9 @@ var TicTacToe = {
     },
     initGame : function(joueur1, joueur2){
        
+        this.winner = false;
+        this.currentPlayer = false;
+        this.joueurs = [];
         this.joueurs.push(joueur1);
         this.joueurs.push(joueur2);
 

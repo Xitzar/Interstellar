@@ -1,0 +1,24 @@
+html{ scroll-behavior: smooth; }
+* {outline:none;}
+
+.site-container{
+    max-width: 1640px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+.content-container{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+
+.invisible {visibility: hidden;}
+.color-primary { color: $primary_color; }
+.color-secondary { color: $secondary_color; }
+
+.sm-show, .md-show, .lg-show, .xlg-show {display:none;}
+@media #{$breakpoint-sm} { .sm-show {display:block;} }
+@media #{$breakpoint-md} { .md-show {display:block;} }
+@media #{$breakpoint-lg} { .lg-show {display:block;} }
+@media #{$breakpoint-xlg} { .xlg-show {display:block;} }

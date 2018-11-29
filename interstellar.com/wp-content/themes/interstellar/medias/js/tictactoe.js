@@ -1,45 +1,26 @@
-
-// // Initialiser les 2 joueurs
-// var joueur1 = TicTacToe.initPlayer("APB", "O"); // Factory
-// console.log(joueur1);
-// var joueur2 = TicTacToe.initPlayer("Phil", "X");
-// console.log(joueur2);
-// var game = TicTacToe.initGame(joueur1, joueur2);
-// console.log(game);
-
-// game.start();
-
-// while( !game.hasWinner() ) {
-
-//     //var nextMove = [0,0];
-//     //game.move(0,0);
-// }
-
-// var winner = game.getWinner();
-
-
-
 var TicTacToe = {
     
     board : [],
     joueurs : [],    
     currentPlayer : false,
-    winner : [],   
+    winner : "",   
     
     move : function(x,y) {
         
         // recuperer la valeur associe au current player
-        movepiece = this.currentPlayer(piece)        
+        movepiece = this.currentPlayer['piece'];        
         
         // mettre cette valeur à x,y dans le board
-        this.board[x,y] = movepiece
-
+        this.board[x][y] = movepiece;
     },  
 
     initPlayer : function(name, piece) {
         var joueur = {
             "name" : name,
             "piece" : piece,
+            getUIPiece : function() {
+                return this.piece == 2 ? 'X' : "O";
+            }
         };
         return joueur;        
     },
@@ -49,14 +30,16 @@ var TicTacToe = {
         this.joueurs.push(joueur2);
 
         // reset le board
-        for(var i=0; i<2;i++) {
-            for(var j=0; j<2; j++) {
-                this.board[i,j] = 0;
+        for(var i=0; i<3;i++) {
+            
+            this.board[i] = [];
+            for(var j=0; j<3; j++) {
+                this.board[i][j] = 30;
             }                
         }                                                                                                    
     },
-    start : function(){
-        
+    start : function() {
+
         //start the game, get a random current player in the players array        
         this.currentPlayer = this.joueurs[Math.floor(Math.random()*this.joueurs.length)];
     },
@@ -65,51 +48,56 @@ var TicTacToe = {
 
         if( this.evaluate() ) {
             // il y a un gagnant
+            return true;
         }
-
+        
         this.changeToNextPlayer();        
         return false;
     },
     changeToNextPlayer : function() {
-        
-        // changer le currentPlayer pour lautre joueur
-        if(this.currentPlayer == this.joueur1){
-            this.currentPlayer = this.joueur2;
-        }
-        else{
-            this.currentPlayer = this.joueur1;
-        }
+
+        if( this.joueurs.length == 2 ) {
+            
+            // changer le currentPlayer pour lautre joueur
+            if(this.currentPlayer.name == this.joueurs[0].name){
+                var joueur = this.joueurs[1];
+                this.currentPlayer = joueur;
+            }
+            else if(this.currentPlayer.name == this.joueurs[1].name){
+                var joueur = this.joueurs[0];
+                this.currentPlayer = joueur;
+            }               
+        }   
+    },
+    test : function(value) {
+
+        return (this.board[0][0]+this.board[0][1]+this.board[0][2] == value // row 1
+            || this.board[0][0]+this.board[1][0]+this.board[2][0] == value // col 1
+            || this.board[0][0]+this.board[1][1]+this.board[2][2] == value // diag1
+            || this.board[1][0]+this.board[1][1]+this.board[1][2] == value // row 2
+            || this.board[2][0]+this.board[2][1]+this.board[2][2] == value  //row3
+            || this.board[0][1]+this.board[1][1]+this.board[2][1] == value // col2
+            || this.board[0][2]+this.board[1][2]+this.board[2][2] == value  // col3
+            || this.board[0][2]+this.board[1][1]+this.board[2][0] == value); //diag2
     },
     evaluate : function() {
-        if(this.board[0,0]+this.board[0,1]+this.board[0,2] == 3 || this.board[0,0]+this.board[1,0]+this.board[2,0] == 3
-            || this.board[0,0]+this.board[1,1]+this.board[2,2] == 3 || this.board[1,0]+this.board[1,1]+this.board[1,2] == 3
-            || this.board[2,0]+this.board[2,1]+this.board[2,2] == 3 || this.board[0,1]+this.board[1,1]+this.board[2,1] == 3
-            || this.board[0,2]+this.board[1,2]+this.board[2,2] == 3 || this.board[0,2]+this.board[1,1]+this.board[2,0] == 3) {
-                this.winner = joueur1
+
+        if( this.test(3) ) {
+                this.winner = this.joueurs[0];
                 return true;
         }
-        else if(this.board[0,0]+this.board[0,1]+this.board[0,2] == 6 || this.board[0,0]+this.board[1,0]+this.board[2,0] == 6
-            || this.board[0,0]+this.board[1,1]+this.board[2,2] == 6 || this.board[1,0]+this.board[1,1]+this.board[1,2] == 6
-            || this.board[2,0]+this.board[2,1]+this.board[2,2] == 6 || this.board[0,1]+this.board[1,1]+this.board[2,1] == 6
-            || this.board[0,2]+this.board[1,2]+this.board[2,2] == 6 || this.board[0,2]+this.board[1,1]+this.board[2,0] == 6){
-                this.winner = joueur2
+        else if( this.test(6) ){
+                this.winner = this.joueurs[1];
                 return true;
         }
-        else if(this.board[0,0]+this.board[0,1]+this.board[0,2]+this.board[1,0]+this.board[1,1]+this.board[1,2]+
-            this.board[2,0]+this.board[2,1]+this.board[2,2] == 13 || this.board[0,0]+this.board[0,1]+this.board[0,2]+
-            this.board[1,0]+this.board[1,1]+this.board[1,2]+this.board[2,0]+this.board[2,1]+this.board[2,2] == 14){
-                this.winner = "Draw !"
+        else if(this.board[0][0]+this.board[0][1]+this.board[0][2]+this.board[1][0]+this.board[1][1]+this.board[1][2]+
+            this.board[2][0]+this.board[2][1]+this.board[2][2] == 13 || this.board[0][0]+this.board[0][1]+this.board[0][2]+
+            this.board[1][0]+this.board[1][1]+this.board[1][2]+this.board[2][0]+this.board[2][1]+this.board[2][2] == 14){
+                this.winner = "Draw !";
                 return true;
         }
         else{
             return false;
         }        
-    }
-};
-
-var Toolbox = {
-
-    getRandomInt : function(max) {
-        return Math.floor(Math.random() * Math.floor(max));
     }
 };

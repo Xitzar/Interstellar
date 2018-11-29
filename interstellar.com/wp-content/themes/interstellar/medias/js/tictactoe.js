@@ -1,9 +1,11 @@
 
 // // Initialiser les 2 joueurs
 // var joueur1 = TicTacToe.initPlayer("APB", "O"); // Factory
+// console.log(joueur1);
 // var joueur2 = TicTacToe.initPlayer("Phil", "X");
-
+// console.log(joueur2);
 // var game = TicTacToe.initGame(joueur1, joueur2);
+// console.log(game);
 
 // game.start();
 
@@ -49,12 +51,14 @@ var TicTacToe = {
         // reset le board
         for(var i=0; i<2;i++) {
             for(var j=0; j<2; j++) {
-                this.board(i,j) = 0;
+                this.board[i,j] = 0;
             }                
         }                                                                                                    
     },
-    start : function(joueurs){
-        currentPlayer = this.joueurs[Math.floor(Math.random()*this.joueurs.lenght)];
+    start : function(){
+        
+        //start the game, get a random current player in the players array        
+        this.currentPlayer = this.joueurs[Math.floor(Math.random()*this.joueurs.length)];
     },
 
     hasWinner : function() {

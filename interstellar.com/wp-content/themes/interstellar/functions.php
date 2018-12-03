@@ -25,11 +25,11 @@ add_action( 'wp_enqueue_scripts', 'bouletap_scripts' );
 
 function bouletap_footerscripts() {
 	$path = get_stylesheet_uri() . "/../medias/js/";
-	wp_enqueue_script('bootstrap', "{$path}bootstrap.js", array('jquery'));
 
     if( is_page_template("templates/arena.php") ){
 		//wp_enqueue_script('bootstrap', "{$path}bootstrap.js", array('jquery'));
 		wp_enqueue_script('tictactoe', "{$path}tictactoe.js", array('jquery'));
+		wp_enqueue_script('tictactoe-ui', "{$path}tictactoe-ui.js", array('jquery'));
 	}
 }
 add_action( 'wp_footer', 'bouletap_footerscripts' );

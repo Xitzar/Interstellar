@@ -1,0 +1,23 @@
+.tictactoe {
+    border:1px solid #000;   
+}
+
+.tictactoe .cell {
+    background-color: #DDD;
+}
+
+.tictactoe .board a {
+    display:inline-block;
+    line-height:30px;
+    font-size:30px;
+    background-color:#FFF;
+}
+
+.btn-start {
+    border: 1px solid red;
+    font-size:14px;
+    padding:10px 20px;
+    border-radius:6px;
+}
+
+#colophon {display:none;}

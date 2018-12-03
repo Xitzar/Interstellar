@@ -1,6 +1,7 @@
 
 <section>
-    <a href="javascript:;" class="btn btn-start">Démarrer une partie</a>
+    <a href="javascript:;" class="btn btn-start solo">Démarrer une partie SOLO</a>
+    <a href="javascript:;" class="btn btn-start ai">Démarrer une partie AI</a>
 </section>
 
 

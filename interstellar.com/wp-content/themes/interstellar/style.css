@@ -2036,23 +2036,43 @@ html {
   .xlg-show {
     display: block; } }
 
-.tictactoe {
-  border: 1px solid #000; }
-
 .tictactoe .cell {
   background-color: #DDD; }
 
+.tictactoe .board {
+  width: auto; }
+
 .tictactoe .board a {
-  display: inline-block;
+  display: inline-flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
   line-height: 30px;
   font-size: 30px;
-  background-color: #FFF; }
+  background-color: #FFF;
+  width: 10vh;
+  height: 10vh; }
+  @media (min-width: 52em) {
+    .tictactoe .board a {
+      width: 15vh;
+      height: 15vh; } }
+  .tictactoe .board a:hover {
+    transform: scale(1.3);
+    box-shadow: 0 22px 40px 0px rgba(10, 31, 68, 0.12);
+    opacity: 1;
+    z-index: 2; }
 
 .btn-start {
   border: 1px solid red;
   font-size: 14px;
   padding: 10px 20px;
   border-radius: 6px; }
+
+.btn-start.solo {
+  border: 1px solid green; }
+
+.btn-start.ai {
+  border: 1px solid blue; }
 
 #colophon {
   display: none; }

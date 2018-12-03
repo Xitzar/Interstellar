@@ -20,7 +20,7 @@ get_header();
     
     <div class="content-container my2">
         <div id="arena">
-                <?php get_template_part("template-parts/tic-tac-toe"); ?>
+            <?php get_template_part("template-parts/tic-tac-toe"); ?>
         </div>
     </div>
 </div>

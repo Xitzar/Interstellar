@@ -115,7 +115,7 @@ jQuery( document ).ready(function($) {
         
         doMove(x,y);
 
-        if( BoardGame.gameType == 1 ) {
+        if( BoardGame.gameType == 1 && !BoardGame.game.hasWinner() ) {
             autoPlayGame();
         }
         

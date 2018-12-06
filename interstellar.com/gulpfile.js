@@ -17,7 +17,7 @@ var projectdata = {
         "files" : [
             "wp-content/themes/interstellar/*.css", 
             "wp-content/themes/interstellar/*.php",
-            "wp-content/themes/interstellar/medias/js/**",
+            "wp-content/themes/interstellar/medias/js/*.js",
             "wp-content/themes/interstellar/templates/*.php",        
             "wp-content/themes/interstellar/template-parts/*.php",
             "wp-content/themes/interstellar/template-parts/**/*.php"
@@ -27,10 +27,11 @@ var projectdata = {
 };
 
 sass.compiler = require('node-sass');    
+
 gulp.task('sass', function () {
-return gulp.src(projectdata.scss+"../../style.scss")
-    .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest(projectdata.scss+"../../"));
+    return gulp.src(projectdata.scss+"../../style.scss")
+        .pipe(sass().on('error', sass.logError))
+        .pipe(gulp.dest(projectdata.scss+"../../"));
 });
 
 // sass task
@@ -60,14 +61,12 @@ gulp.task('deploy-watch', function() {
 
     var conn = getFtpConnection();
 
-    gulp.watch(projectdata.watcher.files)
-    .on('change', function(event) {
-      console.log('Changes detected! Uploading file "' + event.path + '", ' + event.type);
+    gulp.watch(projectdata.watcher.files).on('change', function(event) {
+        console.log('Changes detected! Uploading file "' + event.path + '", ' + event.type);
 
-      return gulp.src( [event.path], { base: '.', buffer: false } )
-        .pipe( conn.newer( ftpConfigs.remotePath ) ) // only upload newer files
-        .pipe( conn.dest( ftpConfigs.remotePath ) )
-      ;
+        return gulp.src( [event.path], { base: '.', buffer: false } )
+            //.pipe( conn.newer( ftpConfigs.remotePath ) ) // only upload newer files
+            .pipe( conn.dest( ftpConfigs.remotePath ) );
     });
 });
 
@@ -77,6 +76,6 @@ function getFtpConnection(){
             port: ftpConfigs.port,
             user: ftpConfigs.user,
             password: ftpConfigs.pass,
-            //log: gutil.log
+            log: gutil.log
       });
 }

@@ -58,9 +58,10 @@ TicTacToeBot.prototype.getBestMove = function(gameTree)  {
 TicTacToeBot.prototype.getNextMove = function()  {
     //var gameTree = this.createGameTree(this.game);
     //var bestMove = this.getBestMove(gameTree);
-
-    var bestMove = this.MonteCarloTreeSearch(this.game);
-    console.log(bestMove);
+    propagation = 0;
+    var bestMove = this.MonteCarloTreeSearch(this.game, 1);
+    //console.log(bestMove);
+    //console.log(propagation);
     return bestMove;
 };
 
@@ -113,47 +114,70 @@ TicTacToeBot.prototype.createGameTree = function(currentGame, nodefined) {
 
 
 
+var propagation = 0;
 
-TicTacToeBot.prototype.MonteCarloTreeSearch = function(currentGame) {
+TicTacToeBot.prototype.MonteCarloTreeSearch = function(currentGame, depth) {
     var bestMove = []; //[x,y,score]
-    var bestMoveScore = 0;
+    var bestWorstMove = [];
 
     // creer les prochains moves
-
     for(var x=0; x<3;x++) {
         for(var y=0; y<3; y++) {         
+
             if( currentGame.isUnclaimed(x,y) ) {                                      
+                
+                
+                
+                
+                
                 var newTicTacToe = new TicTacToe();
                 newTicTacToe.initFromClone(currentGame);
                 newTicTacToe.move(x,y);
-                            
-                if( !newTicTacToe.hasWinner()) {
-                    
-                    newTicTacToe.changeToNextPlayer();
-                    var bestAdversarialMove = this.MonteCarloTreeSearch(newTicTacToe); // x, y, score
 
-                }            
+                if( !newTicTacToe.hasWinner()) {                    
+                    newTicTacToe.changeToNextPlayer();              
+                    var bestAdversarialMove = this.MonteCarloTreeSearch(newTicTacToe, depth + 1); // x, y, score
+                }     
                 else {
                     
                     if( newTicTacToe.winner.id == currentGame.currentPlayer.id ) { 
-
-                        console.log();
-                        score = -99999;
-
+                        score = 1 / depth;
                     }
                     else {
-                        score = 99999;
-                    } 
-                    
-                    var bestAdversarialMove = [x,y,score];
+                        score = -1 / depth;
+                        propagation++;
+                    }                     
+                    var bestAdversarialMove = [0,0, score];
                 }  
+
+
+
+
                 
-                
-                if( bestMove.length == 0 || (bestAdversarialMove[2] > bestMove[2]) ) {
-                    bestMove = bestAdversarialMove;
+                if( bestMove.length == 0 ) {
+                    bestMove = [x,y, bestAdversarialMove[2]];
+                }    
+
+                if( depth % 2 ==0 && bestAdversarialMove[2] > bestMove[2] ) {
+                    bestMove = [x,y, bestAdversarialMove[2]];
+                }
+
+                else if ( depth % 2 == 1 && bestAdversarialMove[2] < bestMove[2]) {
+                    bestMove = [x,y, bestAdversarialMove[2]];
+                }
+
+
+                if( depth == 1 ) {                  
+                    console.log("("+x+","+y+") = " + bestAdversarialMove[2]);
+                    console.log("Current best score: " + bestMove[2]);  
                 }
             }
         }                
     }  
+
+    if( depth == 1 ) {                    
+        console.log(bestMove);
+    }
+
     return bestMove;
 };

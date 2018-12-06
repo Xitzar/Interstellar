@@ -9,13 +9,14 @@ var TicTacToe = function() {
 };
 
 TicTacToe.prototype.initFromClone = function(clone){
-    var board = clone.board;
+        var board = clone.board;
         var joueurs = clone.joueurs;
         var currentPlayer = clone.currentPlayer;
-        this.board = board;
+        this.board = cloneBoard(board);
         this.joueurs = joueurs;
         this.currentPlayer = currentPlayer;
 };
+
 TicTacToe.prototype.move = function(x,y){
         // recuperer la valeur associe au current player
         movepiece = this.currentPlayer['piece'];        
@@ -26,6 +27,7 @@ TicTacToe.prototype.move = function(x,y){
             this.lastMove = [x,y];
         }
 };    
+
 TicTacToe.prototype.isUnclaimed = function(x,y){
     if(this.board[x][y] == 30){
         return true;
@@ -34,6 +36,7 @@ TicTacToe.prototype.isUnclaimed = function(x,y){
         return false;
     }
 };
+
 TicTacToe.prototype.initPlayer = function(id, name, piece) { 
     var joueur = {
         "id" : id,
@@ -45,8 +48,7 @@ TicTacToe.prototype.initPlayer = function(id, name, piece) {
     };
     this.joueurs.push(joueur);
 };
-        
-
+      
 
 TicTacToe.prototype.initGame = function(){
        
@@ -54,13 +56,35 @@ TicTacToe.prototype.initGame = function(){
     this.currentPlayer = false;
 
     // reset le board
-    for(var i=0; i<3;i++) {
-        
-        this.board[i] = [];
+    this.resetBoard();                                                                                                  
+};
+
+TicTacToe.prototype.resetBoard = function() {
+       
+    var board = [];
+
+    // reset le board
+    for(var i=0; i<3;i++) {        
+        board[i] = [];
         for(var j=0; j<3; j++) {
-            this.board[i][j] = 30;
+            board[i][j] = 30;
         }                
-    }                                                                                                    
+    }   
+    this.board = board;                                                                                                 
+};
+
+function cloneBoard(pboard) {
+       
+    var board = [];
+
+    // reset le board
+    for(var i=0; i<3;i++) {        
+        board[i] = [];
+        for(var j=0; j<3; j++) {
+            board[i][j] = pboard[i][j];
+        }                
+    }   
+    return board;                                                                                                 
 };
 
 

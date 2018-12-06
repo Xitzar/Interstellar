@@ -1,4 +1,3 @@
-
 /*
 *
 *   1. Boucler les x,y
@@ -67,6 +66,7 @@ TicTacToeBot.prototype.getNextMove = function()  {
     console.log(bestMove);
     return bestMove;
 };
+
 TicTacToeBot.prototype.createGameTree = function(currentGame, nodefined) {
     var game = currentGame;
     var output = {

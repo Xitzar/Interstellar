@@ -16,11 +16,11 @@ var projectdata = {
     "watcher" : {
         "files" : [
             "wp-content/themes/interstellar/*.css", 
-            // "wp-content/themes/interstellar/*.php",
-            // "wp-content/themes/interstellar/medias/js/**",
-            // "wp-content/themes/interstellar/templates/*.php",        
-            // "wp-content/themes/interstellar/template-parts/*.php",
-            // "wp-content/themes/interstellar/template-parts/**/*.php"
+            "wp-content/themes/interstellar/*.php",
+            "wp-content/themes/interstellar/medias/js/**",
+            "wp-content/themes/interstellar/templates/*.php",        
+            "wp-content/themes/interstellar/template-parts/*.php",
+            "wp-content/themes/interstellar/template-parts/**/*.php"
         ]
     },
     "scss" : ["./wp-content/themes/interstellar/medias/sass/"]
@@ -54,7 +54,22 @@ gulp.task('remote-deploy', function(){
     return gulp.src(projectdata.watcher.files, {base: '.', buffer: false})
                .pipe(conn.newer(ftpConfigs.remotePath))
                .pipe(conn.dest(ftpConfigs.remotePath))
-})
+});
+
+gulp.task('deploy-watch', function() {
+
+    var conn = getFtpConnection();
+
+    gulp.watch(projectdata.watcher.files)
+    .on('change', function(event) {
+      console.log('Changes detected! Uploading file "' + event.path + '", ' + event.type);
+
+      return gulp.src( [event.path], { base: '.', buffer: false } )
+        .pipe( conn.newer( ftpConfigs.remotePath ) ) // only upload newer files
+        .pipe( conn.dest( ftpConfigs.remotePath ) )
+      ;
+    });
+});
 
 function getFtpConnection(){
      return ftp.create({

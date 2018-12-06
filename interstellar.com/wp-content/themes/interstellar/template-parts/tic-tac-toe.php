@@ -30,7 +30,6 @@
         <?php endfor; ?>
     </table>
         
-
     <div class="col-12 center result hide">
         <span class="name"></span> <a href="javascript:;" class="btn btn-reset"><i class="fa fa-refresh" aria-hidden="true"></i> Reset</a>
     </div>

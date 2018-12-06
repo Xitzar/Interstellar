@@ -1,4 +1,4 @@
 var BoardGame = {
-    players : [],
-    board : []
+    gameType : 0,
+    game : false
 };

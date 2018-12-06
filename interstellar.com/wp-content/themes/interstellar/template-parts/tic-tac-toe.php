@@ -20,7 +20,7 @@
                 <?php for($y=0; $y<3; $y++): ?>
 
                     <td class="center">
-                        <a href="javascript:;" class="case px2 px7" data-x="<?php echo $x ?>" data-y="<?php echo $y ?>">
+                        <a href="javascript:;" id="case-<?php echo $x ?>_<?php echo $y ?>" class="case px2 px7" data-x="<?php echo $x ?>" data-y="<?php echo $y ?>">
                             <span class="cell_<?php echo $x."_".$y ?>">?</span>
                         </a>
                     </td>
@@ -30,8 +30,7 @@
         <?php endfor; ?>
     </table>
         
-
     <div class="col-12 center result hide">
-        Le gagnant est : <span class="name"></span> <a href="javascript:;" class="btn btn-reset"><i class="fa fa-refresh" aria-hidden="true"></i> Reset</a>
+        <span class="name"></span> <a href="javascript:;" class="btn btn-reset"><i class="fa fa-refresh" aria-hidden="true"></i> Reset</a>
     </div>
 </section>

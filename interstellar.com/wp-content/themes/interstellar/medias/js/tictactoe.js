@@ -7,14 +7,16 @@ var TicTacToe = function() {
     this.winner = false;
     this.lastMove = [];    
 };
+
 TicTacToe.prototype.initFromClone = function(clone){
-    var board = clone.board;
+        var board = clone.board;
         var joueurs = clone.joueurs;
         var currentPlayer = clone.currentPlayer;
-        this.board = board;
+        this.board = cloneBoard(board);
         this.joueurs = joueurs;
         this.currentPlayer = currentPlayer;
 };
+
 TicTacToe.prototype.move = function(x,y){
         // recuperer la valeur associe au current player
         movepiece = this.currentPlayer['piece'];        
@@ -24,7 +26,8 @@ TicTacToe.prototype.move = function(x,y){
             this.board[x][y] = movepiece;
             this.lastMove = [x,y];
         }
-};
+};    
+
 TicTacToe.prototype.isUnclaimed = function(x,y){
     if(this.board[x][y] == 30){
         return true;
@@ -44,20 +47,46 @@ TicTacToe.prototype.initPlayer = function(id, name, piece) {
     };
     this.joueurs.push(joueur);
 };
+      
+
 TicTacToe.prototype.initGame = function(){
        
     this.winner = false;
     this.currentPlayer = false;
 
     // reset le board
-    for(var i=0; i<3;i++) {
-        
-        this.board[i] = [];
-        for(var j=0; j<3; j++) {
-            this.board[i][j] = 30;
-        }                
-    }                                                                                                    
+    this.resetBoard();                                                                                                  
 };
+
+TicTacToe.prototype.resetBoard = function() {
+       
+    var board = [];
+
+    // reset le board
+    for(var i=0; i<3;i++) {        
+        board[i] = [];
+        for(var j=0; j<3; j++) {
+            board[i][j] = 30;
+        }                
+    }   
+    this.board = board;                                                                                                 
+};
+
+function cloneBoard(pboard) {
+       
+    var board = [];
+
+    // reset le board
+    for(var i=0; i<3;i++) {        
+        board[i] = [];
+        for(var j=0; j<3; j++) {
+            board[i][j] = pboard[i][j];
+        }                
+    }   
+    return board;                                                                                                 
+};
+
+
 TicTacToe.prototype.start = function() {
 
     //start the game, get a random current player in the players array        
@@ -97,7 +126,8 @@ TicTacToe.prototype.test = function(value) {
         || this.board[0][1]+this.board[1][1]+this.board[2][1] == value // col2
         || this.board[0][2]+this.board[1][2]+this.board[2][2] == value  // col3
         || this.board[0][2]+this.board[1][1]+this.board[2][0] == value); //diag2
-};   
+};
+    
 TicTacToe.prototype.evaluate = function() {
 
     if( this.test(3) ) {

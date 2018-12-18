@@ -4,7 +4,9 @@ var gulp        = require('gulp'),
     gutil       = require('gutil'),
     sass        = require('gulp-sass'),    
     ftp         = require('vinyl-ftp'),    
-    ftpConfigs = require('./ftpprivate'),
+    ftpConfigs = require('./ftpprivate'),    
+    ts          = require('gulp-typescript'),
+    concat      = require('gulp-concat'),
     browserSync = require('browser-sync').create();
  
 var ftpConfigs = require('./ftpprivate');
@@ -57,8 +59,48 @@ gulp.task('remote-deploy', function(){
                .pipe(conn.dest(ftpConfigs.remotePath))
 });
 
-gulp.task('deploy-watch', function() {
+gulp.task('tstranspile', function () {
+    return gulp.src('wp-content/themes/interstellar/medias/js/**/*.ts')
+        .pipe(ts({
+            noImplicitAny: true,
+            outFile: 'output.js'
+        }))
+        .pipe(gulp.dest('wp-content/themes/interstellar/medias/js/bin/'));
+});
 
+
+
+var tsProject = ts.createProject({
+    declaration: false
+}); 
+
+var jsroot = 'wp-content/themes/interstellar/medias/js/';
+var jsbin = [
+    'wp-content/themes/interstellar/medias/js/bin/*.js',
+    'wp-content/themes/interstellar/medias/js/bin/**/*.js'
+];
+
+gulp.task('scripts', function() {
+    return gulp.src( jsroot + '**/*.ts')
+        .pipe(tsProject())
+        .pipe(gulpest.dest( jsroot + 'bin/' ));
+});
+
+gulp.task('concator', function() {
+    return gulp.src(jsbin)
+      .pipe(concat('main.js'))
+      .pipe(gulp.d(jsroot));
+});
+ 
+gulp.task('automator', ['scripts', 'concator', 'ftpwatch'], function() {
+    gulp.watch(jsroot + '**/*.ts', ['scripts']);
+    gulp.watch(jsbin, ['concator']);
+});
+
+
+
+gulp.task('ftpwatch', function() {
+    
     var conn = getFtpConnection();
 
     gulp.watch(projectdata.watcher.files).on('change', function(event) {

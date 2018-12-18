@@ -125,10 +125,7 @@ TicTacToeBot.prototype.MonteCarloTreeSearch = function(currentGame, depth) {
         for(var y=0; y<3; y++) {         
 
             if( currentGame.isUnclaimed(x,y) ) {                                      
-                
-                
-                
-                
+                                    
                 
                 var newTicTacToe = new TicTacToe();
                 newTicTacToe.initFromClone(currentGame);
@@ -136,32 +133,30 @@ TicTacToeBot.prototype.MonteCarloTreeSearch = function(currentGame, depth) {
 
                 if( !newTicTacToe.hasWinner()) {                    
                     newTicTacToe.changeToNextPlayer();              
-                    var bestAdversarialMove = this.MonteCarloTreeSearch(newTicTacToe, depth + 1); // x, y, score
+                    var bestAdversarialMove = this.MonteCarloTreeSearch(newTicTacToe, depth + 1); 
                 }     
                 else {
                     
                     if( newTicTacToe.winner.id == currentGame.currentPlayer.id ) { 
-                        score = 1 / depth;
+                        score = 1 / Math.pow(3, depth);                        
                     }
                     else {
-                        score = -1 / depth;
+                        score = - 1 / (Math.pow(3, depth));
                         propagation++;
                     }                     
+
                     var bestAdversarialMove = [0,0, score];
                 }  
-
-
-
 
                 
                 if( bestMove.length == 0 ) {
                     bestMove = [x,y, bestAdversarialMove[2]];
                 }    
 
+
                 if( depth % 2 ==0 && bestAdversarialMove[2] > bestMove[2] ) {
                     bestMove = [x,y, bestAdversarialMove[2]];
                 }
-
                 else if ( depth % 2 == 1 && bestAdversarialMove[2] < bestMove[2]) {
                     bestMove = [x,y, bestAdversarialMove[2]];
                 }

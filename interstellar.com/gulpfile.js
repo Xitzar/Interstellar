@@ -70,7 +70,7 @@ gulp.task('tstranspile', function () {
 
 
 
-var tsProject = ts.createProject({
+var tsProject = ts.createProject('./tsconfig.json', {
     declaration: false
 }); 
 
@@ -81,15 +81,15 @@ var jsbin = [
 ];
 
 gulp.task('scripts', function() {
-    return gulp.src( jsroot + '**/*.ts')
+    return gulp.src( jsroot + 'src-dev/**/*.ts')
         .pipe(tsProject())
-        .pipe(gulpest.dest( jsroot + 'bin/' ));
+        .pipe(gulp.dest( jsroot + 'bin/' ));
 });
 
 gulp.task('concator', function() {
     return gulp.src(jsbin)
       .pipe(concat('main.js'))
-      .pipe(gulp.d(jsroot));
+      .pipe(gulp.dest(jsroot));
 });
  
 gulp.task('automator', ['scripts', 'concator', 'ftpwatch'], function() {

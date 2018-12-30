@@ -4,7 +4,6 @@
     <a href="javascript:;" class="btn btn-start ai">Démarrer une partie AI</a>
 </section>
 
-
 <section class="tictactoe hide">
 
         
@@ -12,8 +11,6 @@
         <h2>Affrontement entre <span class="player1_name">Player 1</span> et <span class="player2_name">Player 2</span></h2>
         <h4>Au tour de <span class="currentPlayer_name">Player 1</span> de jouer (<span class="currentPlayer_piece">X</span>)</h4>
     </div>
-
-
     <table class="board">
         <?php for($x=0; $x<3; $x++): ?>
             <tr>   

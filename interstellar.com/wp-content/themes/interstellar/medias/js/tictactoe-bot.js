@@ -18,7 +18,7 @@ var iudhqiuwdhwiqudhqwd=0;
 var TicTacToeBot = function() {        
     this.game = [];
 };
-
+/*
 TicTacToeBot.prototype.evaluateGame = function(gameTree) {
     var score = 0; // draw
     if( gameTree.currentGame.winner === -1 ) {
@@ -38,7 +38,12 @@ TicTacToeBot.prototype.evaluateGame = function(gameTree) {
         }
     }
     return score;
-};
+};*/
+
+
+
+
+
 
 TicTacToeBot.prototype.getBestMove = function(gameTree)  {
 

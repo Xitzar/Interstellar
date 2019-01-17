@@ -18,14 +18,14 @@ TicTacToe.prototype.initFromClone = function(clone){
 };
 
 TicTacToe.prototype.move = function(x,y){
-        // recuperer la valeur associe au current player
-        movepiece = this.currentPlayer['piece'];        
-        
-        // mettre cette valeur à x,y dans le board
-        if(this.isUnclaimed(x,y)){
-            this.board[x][y] = movepiece;
-            this.lastMove = [x,y];
-        }
+    // recuperer la valeur associe au current player
+    movepiece = this.currentPlayer['piece'];        
+    
+    // mettre cette valeur à x,y dans le board
+    if(this.isUnclaimed(x,y)){
+        this.board[x][y] = movepiece;
+        this.lastMove = [x,y];
+    }
 };    
 
 TicTacToe.prototype.isUnclaimed = function(x,y){
@@ -72,10 +72,8 @@ TicTacToe.prototype.resetBoard = function() {
     this.board = board;                                                                                                 
 };
 
-function cloneBoard(pboard) {
-       
+function cloneBoard(pboard) {       
     var board = [];
-
     // reset le board
     for(var i=0; i<3;i++) {        
         board[i] = [];

@@ -35,7 +35,7 @@ function resetInterface() {
     BoardGame.game.start();
     jQuery('.tictactoe .result').addClass('hide');
     jQuery('.currentPlayer_name').text(BoardGame.game.currentPlayer.name);
-    jQuery('.currentPlayer_piece').text(BoardGame.game.currentPlayer.getUIPiece());    
+    jQuery('.currentPlayer_piece').text(BoardGame.game.currentPlayer.getUIPiece());
     jQuery('.tictactoe a.case span').text('?');
 }
 
@@ -115,7 +115,7 @@ jQuery( document ).ready(function($) {
         
         doMove(x,y);
 
-        if( BoardGame.gameType == 1 ) {
+        if( BoardGame.gameType == 1 && !BoardGame.game.hasWinner() ) {
             autoPlayGame();
         }
         

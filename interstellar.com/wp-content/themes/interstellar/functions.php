@@ -28,9 +28,15 @@ function bouletap_footerscripts() {
 
     if( is_page_template("templates/arena.php") ){
 		wp_enqueue_script('boardgame', "{$path}boardgame.js", array('jquery'));
+
 		wp_enqueue_script('tictactoe-bot', "{$path}tictactoe-bot.js", array('jquery'));
 		wp_enqueue_script('tictactoe', "{$path}tictactoe.js", array('jquery'));
 		wp_enqueue_script('tictactoe-ui', "{$path}tictactoe-ui.js", array('jquery'));
+
+		
+		wp_enqueue_script('vuejs', "//cdn.jsdelivr.net/npm/vue/dist/vue.js");
+		wp_enqueue_script('testapp', "{$path}app.js", array('vuejs'));
+		wp_enqueue_script('mainapp', "{$path}main.js", array('vuejs'));
 	}
 }
 add_action( 'wp_footer', 'bouletap_footerscripts' );

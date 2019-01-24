@@ -2,11 +2,14 @@
 
 var gulp        = require('gulp'),
     gutil       = require('gutil'),
-    sass        = require('gulp-sass'),    
-    ftp         = require('vinyl-ftp'),    
+    sass        = require('gulp-sass'),
+    ftp         = require('vinyl-ftp'),
     ftpConfigs = require('./ftpprivate'),    
     ts          = require('gulp-typescript'),
     concat      = require('gulp-concat'),
+    webpack      = require('gulp-webpack'),
+    babel      = require('gulp-babel'),
+    sourcemaps      = require('gulp-sourcemaps'),
     browserSync = require('browser-sync').create();
  
 var ftpConfigs = require('./ftpprivate');
@@ -121,3 +124,53 @@ function getFtpConnection(){
             log: gutil.log
       });
 }
+
+
+
+
+/** Typescript -> ES6 -> Babel -> ES5 */
+gulp.task("ts-babel", function () {
+
+    const tsconfig = {
+      target: "es6",
+      lib: ["es5", "dom"]
+    }
+  
+    const babelconfig = {
+      presets: ["es2015"],
+      plugins: ["transform-runtime"]
+    }
+    const tsProject = ts.createProject(tsconfig);
+  
+    return gulp
+    .src(jsroot + 'src-dev/**/*.ts')
+    .pipe(sourcemaps.init())
+    .pipe(tsProject())
+    .js
+    .pipe(babel(babelconfig))
+    .pipe(sourcemaps.write("."))
+    .pipe(gulp.dest(jsroot+"build/es5"));
+  })
+  
+
+  /** Webpack bundle */
+  gulp.task("webpack", ["ts-babel"], function () {
+    const config = {
+      devtool: "source-map",
+      output: {
+        filename: "app.bundle.js"
+      },
+      module: {
+        preLoaders: [
+          {
+            test: /\.js$/,
+            loader: "source-map-loader"
+          }
+        ]
+      }
+    }
+    return gulp
+    .src(jsbin)
+    .pipe(webpack(config))
+    .pipe(gulp.dest(jsroot+"/build/bundle"));
+  })

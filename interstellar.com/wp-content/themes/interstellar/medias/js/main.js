@@ -70,7 +70,6 @@ exports.GameState = GameState;
 
 'use strict';
 Object.defineProperty(exports, "__esModule", { value: true });
-var util = require('util');
 var connect4_1 = require("./connect4/connect4");
 var monte_carlo_1 = require("./monte-carlo");
 var game = new connect4_1.Game_C4();
@@ -83,9 +82,7 @@ while (winner === null) {
     console.log(state.board.map(function (row) { return row.map(function (cell) { return cell === -1 ? 2 : cell; }); }));
     mcts.runSearch(state, 1);
     var stats = mcts.getStats(state);
-    console.log(util.inspect(stats, { showHidden: false, depth: null }));
     var play = mcts.bestPlay(state, "robust");
-    console.log("chosen play: " + util.inspect(play, { showHidden: false, depth: null }));
     state = game.nextGameState(state, play);
     winner = game.winner(state);
 }

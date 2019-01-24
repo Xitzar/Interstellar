@@ -1,6 +1,6 @@
 'use strict'
 
-const util = require('util')
+//const util = require('util')
 import { Game_C4 as Game } from "./connect4/connect4";
 import { MonteCarlo } from "./monte-carlo";
 
@@ -22,10 +22,10 @@ while (winner === null) {
   mcts.runSearch(state, 1)
 
   let stats = mcts.getStats(state)
-  console.log(util.inspect(stats, {showHidden: false, depth: null}))
+  //console.log(util.inspect(stats, {showHidden: false, depth: null}))
 
   let play = mcts.bestPlay(state, "robust")
-  console.log("chosen play: " + util.inspect(play, {showHidden: false, depth: null}))
+  //console.log("chosen play: " + util.inspect(play, {showHidden: false, depth: null}))
 
   state = game.nextGameState(state, play)
   winner = game.winner(state)

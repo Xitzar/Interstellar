@@ -1,6 +1,6 @@
-webpackJsonp([0],{
+webpackJsonp([1],{
 
-/***/ 108:
+/***/ 109:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -13,36 +13,45 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 108;
+webpackEmptyAsyncContext.id = 109;
 
 /***/ }),
 
-/***/ 149:
-/***/ (function(module, exports) {
+/***/ 151:
+/***/ (function(module, exports, __webpack_require__) {
 
-function webpackEmptyAsyncContext(req) {
-	// Here Promise.resolve().then() is used instead of new Promise() to prevent
-	// uncatched exception popping up in devtools
-	return Promise.resolve().then(function() {
-		throw new Error("Cannot find module '" + req + "'.");
+var map = {
+	"../pages/connect4/connect4.module": [
+		278,
+		0
+	]
+};
+function webpackAsyncContext(req) {
+	var ids = map[req];
+	if(!ids)
+		return Promise.reject(new Error("Cannot find module '" + req + "'."));
+	return __webpack_require__.e(ids[1]).then(function() {
+		return __webpack_require__(ids[0]);
 	});
-}
-webpackEmptyAsyncContext.keys = function() { return []; };
-webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
-module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 149;
+};
+webpackAsyncContext.keys = function webpackAsyncContextKeys() {
+	return Object.keys(map);
+};
+webpackAsyncContext.id = 151;
+module.exports = webpackAsyncContext;
 
 /***/ }),
 
-/***/ 193:
+/***/ 195:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TabsPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__about_about__ = __webpack_require__(194);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__contact_contact__ = __webpack_require__(195);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__home_home__ = __webpack_require__(196);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__connect4_connect4__ = __webpack_require__(99);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__about_about__ = __webpack_require__(196);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__contact_contact__ = __webpack_require__(197);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__home_home__ = __webpack_require__(198);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -56,14 +65,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var TabsPage = /** @class */ (function () {
     function TabsPage() {
-        this.tab1Root = __WEBPACK_IMPORTED_MODULE_3__home_home__["a" /* HomePage */];
-        this.tab2Root = __WEBPACK_IMPORTED_MODULE_1__about_about__["a" /* AboutPage */];
-        this.tab3Root = __WEBPACK_IMPORTED_MODULE_2__contact_contact__["a" /* ContactPage */];
+        this.tab1Root = __WEBPACK_IMPORTED_MODULE_4__home_home__["a" /* HomePage */];
+        this.tab2Root = __WEBPACK_IMPORTED_MODULE_2__about_about__["a" /* AboutPage */];
+        this.tab3Root = __WEBPACK_IMPORTED_MODULE_0__connect4_connect4__["a" /* Connect4Page */];
+        this.tab4Root = __WEBPACK_IMPORTED_MODULE_3__contact_contact__["a" /* ContactPage */];
     }
     TabsPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"E:\School1\NodesAP\Interstellar\src\pages\tabs\tabs.html"*/'<ion-tabs>\n  <ion-tab [root]="tab1Root" tabTitle="Home" tabIcon="home"></ion-tab>\n  <ion-tab [root]="tab2Root" tabTitle="About" tabIcon="information-circle"></ion-tab>\n  <ion-tab [root]="tab3Root" tabTitle="Contact" tabIcon="contacts"></ion-tab>\n</ion-tabs>\n'/*ion-inline-end:"E:\School1\NodesAP\Interstellar\src\pages\tabs\tabs.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["m" /* Component */])({template:/*ion-inline-start:"C:\BouletAP\MyOwn\Interstellar_Final\Interstellar\src\pages\tabs\tabs.html"*/'<ion-tabs>\n\n  <ion-tab [root]="tab1Root" tabTitle="Home" tabIcon="home"></ion-tab>\n\n  <ion-tab [root]="tab2Root" tabTitle="About" tabIcon="information-circle"></ion-tab>\n\n  <ion-tab [root]="tab3Root" tabTitle="Connect4" tabIcon="apps"></ion-tab>\n\n  <ion-tab [root]="tab4Root" tabTitle="Contact" tabIcon="contacts"></ion-tab>\n\n</ion-tabs>\n\n'/*ion-inline-end:"C:\BouletAP\MyOwn\Interstellar_Final\Interstellar\src\pages\tabs\tabs.html"*/
         }),
         __metadata("design:paramtypes", [])
     ], TabsPage);
@@ -74,13 +85,13 @@ var TabsPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 194:
+/***/ 196:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AboutPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(27);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -98,9 +109,9 @@ var AboutPage = /** @class */ (function () {
     }
     AboutPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-about',template:/*ion-inline-start:"E:\School1\NodesAP\Interstellar\src\pages\about\about.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      About\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"E:\School1\NodesAP\Interstellar\src\pages\about\about.html"*/
+            selector: 'page-about',template:/*ion-inline-start:"C:\BouletAP\MyOwn\Interstellar_Final\Interstellar\src\pages\about\about.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>\n\n      Connect 4\n\n    </ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n<section class="tictactoe ">\n\n            \n\n        <div class="col-12">    \n\n            <h2>Affrontement entre <span class="player1_name">Player 1</span> et <span class="player2_name">Player 2</span></h2> \n\n            <p>  \n\n            nice\n\n            </p>\n\n\n\n        </div>\n\n\n\n            \n\n    </section>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\BouletAP\MyOwn\Interstellar_Final\Interstellar\src\pages\about\about.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */]])
     ], AboutPage);
     return AboutPage;
 }());
@@ -109,13 +120,13 @@ var AboutPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 195:
+/***/ 197:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ContactPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(27);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -133,9 +144,9 @@ var ContactPage = /** @class */ (function () {
     }
     ContactPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-contact',template:/*ion-inline-start:"E:\School1\NodesAP\Interstellar\src\pages\contact\contact.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Contact\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-list>\n    <ion-list-header>Follow us on Twitter</ion-list-header>\n    <ion-item>\n      <ion-icon name="ionic" item-start></ion-icon>\n      @ionicframework\n    </ion-item>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"E:\School1\NodesAP\Interstellar\src\pages\contact\contact.html"*/
+            selector: 'page-contact',template:/*ion-inline-start:"C:\BouletAP\MyOwn\Interstellar_Final\Interstellar\src\pages\contact\contact.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>\n\n      Contact\n\n    </ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content>\n\n  <ion-list>\n\n    <ion-list-header>Follow us on Twitter</ion-list-header>\n\n    <ion-item>\n\n      <ion-icon name="ionic" item-start></ion-icon>\n\n      @ionicframework\n\n    </ion-item>\n\n  </ion-list>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\BouletAP\MyOwn\Interstellar_Final\Interstellar\src\pages\contact\contact.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */]])
     ], ContactPage);
     return ContactPage;
 }());
@@ -144,13 +155,13 @@ var ContactPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 196:
+/***/ 198:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(27);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -168,9 +179,9 @@ var HomePage = /** @class */ (function () {
     }
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"E:\School1\NodesAP\Interstellar\src\pages\home\home.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>Home</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <h2>Welcome to Ionic!</h2>\n  <p>\n    This starter project comes with simple tabs-based layout for apps\n    that are going to primarily use a Tabbed UI.\n  </p>\n  <p>\n    Take a look at the <code>src/pages/</code> directory to add or change tabs,\n    update any existing page or create new pages.\n  </p>\n</ion-content>\n'/*ion-inline-end:"E:\School1\NodesAP\Interstellar\src\pages\home\home.html"*/
+            selector: 'page-home',template:/*ion-inline-start:"C:\BouletAP\MyOwn\Interstellar_Final\Interstellar\src\pages\home\home.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>Home</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n  <h2>Welcome to Ionic!</h2>\n\n  <p>\n\n    This starter project comes with simple tabs-based layout for apps\n\n    that are going to primarily use a Tabbed UI.\n\n  </p>\n\n  <p>\n\n    Take a look at the <code>src/pages/</code> directory to add or change tabs,\n\n    update any existing page or create new pages.\n\n  </p>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\BouletAP\MyOwn\Interstellar_Final\Interstellar\src\pages\home\home.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */]])
     ], HomePage);
     return HomePage;
 }());
@@ -179,13 +190,13 @@ var HomePage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 197:
+/***/ 199:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(198);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(220);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(200);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(222);
 
 
 Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
@@ -193,27 +204,29 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 
 /***/ }),
 
-/***/ 220:
+/***/ 222:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(30);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(33);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__(263);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_about_about__ = __webpack_require__(194);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_contact_contact__ = __webpack_require__(195);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_home_home__ = __webpack_require__(196);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_tabs_tabs__ = __webpack_require__(193);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_native_status_bar__ = __webpack_require__(189);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ionic_native_splash_screen__ = __webpack_require__(192);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(27);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__(270);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_about_about__ = __webpack_require__(196);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_contact_contact__ = __webpack_require__(197);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_home_home__ = __webpack_require__(198);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_tabs_tabs__ = __webpack_require__(195);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_native_status_bar__ = __webpack_require__(191);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ionic_native_splash_screen__ = __webpack_require__(194);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_connect4_connect4__ = __webpack_require__(99);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -234,12 +247,16 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_4__pages_about_about__["a" /* AboutPage */],
                 __WEBPACK_IMPORTED_MODULE_5__pages_contact_contact__["a" /* ContactPage */],
                 __WEBPACK_IMPORTED_MODULE_6__pages_home_home__["a" /* HomePage */],
+                __WEBPACK_IMPORTED_MODULE_6__pages_home_home__["a" /* HomePage */],
+                __WEBPACK_IMPORTED_MODULE_10__pages_connect4_connect4__["a" /* Connect4Page */],
                 __WEBPACK_IMPORTED_MODULE_7__pages_tabs_tabs__["a" /* TabsPage */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["a" /* BrowserModule */],
                 __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */], {}, {
-                    links: []
+                    links: [
+                        { loadChildren: '../pages/connect4/connect4.module#Connect4PageModule', name: 'Connect4Page', segment: 'connect4', priority: 'low', defaultHistory: [] }
+                    ]
                 })
             ],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["a" /* IonicApp */]],
@@ -247,6 +264,7 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */],
                 __WEBPACK_IMPORTED_MODULE_4__pages_about_about__["a" /* AboutPage */],
                 __WEBPACK_IMPORTED_MODULE_5__pages_contact_contact__["a" /* ContactPage */],
+                __WEBPACK_IMPORTED_MODULE_10__pages_connect4_connect4__["a" /* Connect4Page */],
                 __WEBPACK_IMPORTED_MODULE_6__pages_home_home__["a" /* HomePage */],
                 __WEBPACK_IMPORTED_MODULE_7__pages_tabs_tabs__["a" /* TabsPage */]
             ],
@@ -264,16 +282,603 @@ var AppModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 263:
+/***/ 247:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GameC4; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__gamestate__ = __webpack_require__(248);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__gameplay__ = __webpack_require__(249);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(250);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
+var __values = (this && this.__values) || function (o) {
+    var m = typeof Symbol === "function" && o[Symbol.iterator], i = 0;
+    if (m) return m.call(o);
+    return {
+        next: function () {
+            if (o && i >= o.length) o = void 0;
+            return { value: o && o[i++], done: !o };
+        }
+    };
+};
+var __read = (this && this.__read) || function (o, n) {
+    var m = typeof Symbol === "function" && o[Symbol.iterator];
+    if (!m) return o;
+    var i = m.call(o), r, ar = [], e;
+    try {
+        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
+    }
+    catch (error) { e = { error: error }; }
+    finally {
+        try {
+            if (r && !r.done && (m = i["return"])) m.call(i);
+        }
+        finally { if (e) throw e.error; }
+    }
+    return ar;
+};
+
+
+
+var N_ROWS = 6;
+var N_COLS = 7;
+var boardPrototype = [[0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0]];
+var checkPrototype = [[0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0]];
+// Class representing the game.
+var GameC4 = /** @class */ (function () {
+    function GameC4() {
+    }
+    // Generate and return the initial game state.
+    GameC4.prototype.start = function () {
+        var newBoard = boardPrototype.map(function (row) { return row.slice(); });
+        return new __WEBPACK_IMPORTED_MODULE_0__gamestate__["a" /* GameState */]([], newBoard, 1);
+    };
+    // Advance the given state and return it.
+    GameC4.prototype.nextGameState = function (state, play) {
+        var newHistory = state.playHistory.slice(); // 1-deep copy
+        newHistory.push(play);
+        var newBoard = state.board.map(function (row) { return row.slice(); });
+        newBoard[play.row][play.col] = state.player;
+        var newPlayer = -state.player;
+        return new __WEBPACK_IMPORTED_MODULE_0__gamestate__["a" /* GameState */](newHistory, newBoard, newPlayer);
+    };
+    // Return the current player's legal plays from given state.
+    GameC4.prototype.legalPlays = function (state) {
+        var legalPlays = [];
+        for (var col = 0; col < N_COLS; col++) {
+            for (var row = N_ROWS - 1; row >= 0; row--) {
+                if (state.board[row][col] === 0) {
+                    legalPlays.push(new __WEBPACK_IMPORTED_MODULE_1__gameplay__["a" /* GamePlay */](row, col));
+                    break;
+                }
+            }
+        }
+        return legalPlays;
+    };
+    // Return the winner of the game.
+    GameC4.prototype.winner = function (state) {
+        // if board is full, there's no winner
+        if (!isNaN(state.board[0].reduce(function (acc, cur) { return cur === 0 ? NaN : acc + cur; }))) {
+            return 0;
+        }
+        // one board for each possible winning run orientation
+        var checkBoards = new Map();
+        checkBoards.set("horiz", checkPrototype.map(function (row) { return row.slice(); }));
+        checkBoards.set("verti", checkPrototype.map(function (row) { return row.slice(); }));
+        checkBoards.set("ldiag", checkPrototype.map(function (row) { return row.slice(); }));
+        checkBoards.set("rdiag", checkPrototype.map(function (row) { return row.slice(); }));
+        // iterate over the board
+        for (var row = 0; row < N_ROWS; row++) {
+            for (var col = 0; col < N_COLS; col++) {
+                var cell = state.board[row][col];
+                try {
+                    for (var checkBoards_1 = __values(checkBoards), checkBoards_1_1 = checkBoards_1.next(); !checkBoards_1_1.done; checkBoards_1_1 = checkBoards_1.next()) {
+                        var _a = __read(checkBoards_1_1.value, 2), key = _a[0], val = _a[1];
+                        // accumulator
+                        var acc = void 0;
+                        switch (key) {
+                            case "horiz":
+                                acc = val[row + 1][col]; // left
+                                break;
+                            case "verti":
+                                acc = val[row][col + 1]; // top
+                                break;
+                            case "ldiag":
+                                acc = val[row][col]; // top left
+                                break;
+                            case "rdiag":
+                                acc = val[row][col + 2]; // top right
+                                break;
+                        }
+                        val[row + 1][col + 1] = cell;
+                        if (cell < 0 && acc < 0 || cell > 0 && acc > 0) {
+                            val[row + 1][col + 1] += acc;
+                        }
+                        if (val[row + 1][col + 1] === 4) {
+                            return 1;
+                        }
+                        if (val[row + 1][col + 1] === -4) {
+                            return -1;
+                        }
+                    }
+                }
+                catch (e_1_1) { e_1 = { error: e_1_1 }; }
+                finally {
+                    try {
+                        if (checkBoards_1_1 && !checkBoards_1_1.done && (_b = checkBoards_1.return)) _b.call(checkBoards_1);
+                    }
+                    finally { if (e_1) throw e_1.error; }
+                }
+            }
+        }
+        return null;
+        var e_1, _b;
+    };
+    return GameC4;
+}());
+
+//# sourceMappingURL=connect4a.js.map
+
+/***/ }),
+
+/***/ 248:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GameState; });
+/** Class representing a game state. */
+var GameState = /** @class */ (function () {
+    function GameState(playHistory, board, player) {
+        this.playHistory = playHistory;
+        this.board = board;
+        this.player = player;
+    }
+    GameState.prototype.isPlayer = function (player) {
+        return (player === this.player);
+    };
+    GameState.prototype.hash = function () {
+        return JSON.stringify(this.playHistory);
+    };
+    return GameState;
+}());
+
+//# sourceMappingURL=gamestate.js.map
+
+/***/ }),
+
+/***/ 249:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GamePlay; });
+
+/** Class representing a state transition. */
+var GamePlay = /** @class */ (function () {
+    function GamePlay(row, col) {
+        this.row = false;
+        this.col = false;
+        this.row = row;
+        this.col = col;
+    }
+    GamePlay.prototype.hash = function () {
+        return this.row.toString() + "," + this.col.toString();
+    };
+    return GamePlay;
+}());
+
+//# sourceMappingURL=gameplay.js.map
+
+/***/ }),
+
+/***/ 251:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MonteCarlo; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__monte_carlo_node__ = __webpack_require__(252);
+var __values = (this && this.__values) || function (o) {
+    var m = typeof Symbol === "function" && o[Symbol.iterator], i = 0;
+    if (m) return m.call(o);
+    return {
+        next: function () {
+            if (o && i >= o.length) o = void 0;
+            return { value: o && o[i++], done: !o };
+        }
+    };
+};
+
+var MonteCarlo = /** @class */ (function () {
+    function MonteCarlo(game, UCB1ExploreParam) {
+        if (UCB1ExploreParam === void 0) { UCB1ExploreParam = 2; }
+        this.game = false;
+        this.UCB1ExploreParam = false;
+        this.game = game;
+        this.UCB1ExploreParam = UCB1ExploreParam;
+        this.nodes = new Map(); // map: State.hash() => MonteCarloNode
+    }
+    /** If given state does not exist, create dangling node. */
+    MonteCarlo.prototype.makeNode = function (state) {
+        if (!this.nodes.has(state.hash())) {
+            var unexpandedPlays = this.game.legalPlays(state).slice();
+            var node = new __WEBPACK_IMPORTED_MODULE_0__monte_carlo_node__["a" /* MonteCarloNode */](null, null, state, unexpandedPlays);
+            this.nodes.set(state.hash(), node);
+        }
+    };
+    /** From given state, repeatedly run MCTS to build statistics. */
+    MonteCarlo.prototype.runSearch = function (state, timeout) {
+        if (timeout === void 0) { timeout = 3; }
+        this.makeNode(state);
+        var end = Date.now() + timeout * 1000;
+        while (Date.now() < end) {
+            var node = this.select(state);
+            var winner = this.game.winner(node.state);
+            if (node.isLeaf() === false && winner === null) {
+                node = this.expand(node);
+                winner = this.simulate(node);
+            }
+            this.backpropagate(node, winner);
+        }
+    };
+    /** Phase 1, Selection: Select until not fully expanded OR leaf */
+    MonteCarlo.prototype.select = function (state) {
+        var node = this.nodes.get(state.hash());
+        while (node.isFullyExpanded() && !node.isLeaf()) {
+            var plays = node.allPlays();
+            var bestPlay = void 0;
+            var bestUCB1 = -Infinity;
+            try {
+                for (var plays_1 = __values(plays), plays_1_1 = plays_1.next(); !plays_1_1.done; plays_1_1 = plays_1.next()) {
+                    var play = plays_1_1.value;
+                    var childUCB1 = node.childNode(play).getUCB1(this.UCB1ExploreParam);
+                    if (childUCB1 > bestUCB1) {
+                        bestPlay = play;
+                        bestUCB1 = childUCB1;
+                    }
+                }
+            }
+            catch (e_1_1) { e_1 = { error: e_1_1 }; }
+            finally {
+                try {
+                    if (plays_1_1 && !plays_1_1.done && (_a = plays_1.return)) _a.call(plays_1);
+                }
+                finally { if (e_1) throw e_1.error; }
+            }
+            node = node.childNode(bestPlay);
+        }
+        return node;
+        var e_1, _a;
+    };
+    /** Phase 2, Expansion: Expand a random unexpanded child node */
+    MonteCarlo.prototype.expand = function (node) {
+        var plays = node.unexpandedPlays();
+        var index = Math.floor(Math.random() * plays.length);
+        var play = plays[index];
+        var childState = this.game.nextGameState(node.state, play);
+        var childUnexpandedPlays = this.game.legalPlays(childState);
+        var childNode = node.expand(play, childState, childUnexpandedPlays);
+        this.nodes.set(childState.hash(), childNode);
+        return childNode;
+        // return childNode
+    };
+    /** Phase 3, Simulation: Play game to terminal state, return winner */
+    MonteCarlo.prototype.simulate = function (node) {
+        var state = node.state;
+        var winner = this.game.winner(state);
+        while (winner === null) {
+            var plays = this.game.legalPlays(state);
+            var play = plays[Math.floor(Math.random() * plays.length)];
+            state = this.game.nextGameState(state, play);
+            winner = this.game.winner(state);
+        }
+        return winner;
+        // return winner
+    };
+    /** Phase 4, Backpropagation: Update ancestor statistics */
+    MonteCarlo.prototype.backpropagate = function (node, winner) {
+        while (node !== null) {
+            node.n_plays += 1;
+            // Parent's choice
+            if (node.state.isPlayer(-winner)) {
+                node.n_wins += 1;
+            }
+            node = node.parent;
+        }
+    };
+    /** Get the best move from available statistics. */
+    MonteCarlo.prototype.bestPlay = function (state, policy) {
+        if (policy === void 0) { policy = "robust"; }
+        this.makeNode(state);
+        // If not all children are expanded, not enough information
+        if (this.nodes.get(state.hash()).isFullyExpanded() === false) {
+            throw new Error("Not enough information!");
+        }
+        var node = this.nodes.get(state.hash());
+        var allPlays = node.allPlays();
+        var bestPlay;
+        // Most visits (robust child)
+        if (policy === "robust") {
+            var max = -Infinity;
+            try {
+                for (var allPlays_1 = __values(allPlays), allPlays_1_1 = allPlays_1.next(); !allPlays_1_1.done; allPlays_1_1 = allPlays_1.next()) {
+                    var play = allPlays_1_1.value;
+                    var childNode = node.childNode(play);
+                    if (childNode.n_plays > max) {
+                        bestPlay = play;
+                        max = childNode.n_plays;
+                    }
+                }
+            }
+            catch (e_2_1) { e_2 = { error: e_2_1 }; }
+            finally {
+                try {
+                    if (allPlays_1_1 && !allPlays_1_1.done && (_a = allPlays_1.return)) _a.call(allPlays_1);
+                }
+                finally { if (e_2) throw e_2.error; }
+            }
+        }
+        else if (policy === "max") {
+            var max = -Infinity;
+            try {
+                for (var allPlays_2 = __values(allPlays), allPlays_2_1 = allPlays_2.next(); !allPlays_2_1.done; allPlays_2_1 = allPlays_2.next()) {
+                    var play = allPlays_2_1.value;
+                    var childNode = node.childNode(play);
+                    var ratio = childNode.n_wins / childNode.n_plays;
+                    if (ratio > max) {
+                        bestPlay = play;
+                        max = ratio;
+                    }
+                }
+            }
+            catch (e_3_1) { e_3 = { error: e_3_1 }; }
+            finally {
+                try {
+                    if (allPlays_2_1 && !allPlays_2_1.done && (_b = allPlays_2.return)) _b.call(allPlays_2);
+                }
+                finally { if (e_3) throw e_3.error; }
+            }
+        }
+        return bestPlay;
+        var e_2, _a, e_3, _b;
+    };
+    MonteCarlo.prototype.getStats = function (state) {
+        var node = this.nodes.get(state.hash());
+        var stats = {
+            n_plays: node.n_plays,
+            n_wins: node.n_wins,
+            children: []
+        };
+        try {
+            for (var _a = __values(node.children.values()), _b = _a.next(); !_b.done; _b = _a.next()) {
+                var child = _b.value;
+                if (child.node === null) {
+                    stats.children.push({
+                        play: child.play,
+                        n_plays: null,
+                        n_wins: null
+                    });
+                }
+                else {
+                    stats.children.push({
+                        play: child.play,
+                        n_plays: child.node.n_plays,
+                        n_wins: child.node.n_wins
+                    });
+                }
+            }
+        }
+        catch (e_4_1) { e_4 = { error: e_4_1 }; }
+        finally {
+            try {
+                if (_b && !_b.done && (_c = _a.return)) _c.call(_a);
+            }
+            finally { if (e_4) throw e_4.error; }
+        }
+        return stats;
+        var e_4, _c;
+    };
+    return MonteCarlo;
+}());
+
+//# sourceMappingURL=monte-carlo.js.map
+
+/***/ }),
+
+/***/ 252:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MonteCarloNode; });
+var __values = (this && this.__values) || function (o) {
+    var m = typeof Symbol === "function" && o[Symbol.iterator], i = 0;
+    if (m) return m.call(o);
+    return {
+        next: function () {
+            if (o && i >= o.length) o = void 0;
+            return { value: o && o[i++], done: !o };
+        }
+    };
+};
+/** Class representing a node in the search tree. */
+var MonteCarloNode = /** @class */ (function () {
+    function MonteCarloNode(parent, play, state, unexpandedPlays) {
+        this.play = false;
+        this.state = false;
+        this.n_plays = 0;
+        this.n_wins = 0;
+        this.parent = false;
+        this.children = false;
+        this.play = play;
+        this.state = state;
+        // Monte Carlo stuff
+        this.n_plays = 0;
+        this.n_wins = 0;
+        // Tree stuff
+        this.parent = parent;
+        this.children = new Map();
+        try {
+            for (var unexpandedPlays_1 = __values(unexpandedPlays), unexpandedPlays_1_1 = unexpandedPlays_1.next(); !unexpandedPlays_1_1.done; unexpandedPlays_1_1 = unexpandedPlays_1.next()) {
+                var uplay = unexpandedPlays_1_1.value;
+                this.children.set(uplay.hash(), { play: uplay, node: null });
+            }
+        }
+        catch (e_1_1) { e_1 = { error: e_1_1 }; }
+        finally {
+            try {
+                if (unexpandedPlays_1_1 && !unexpandedPlays_1_1.done && (_a = unexpandedPlays_1.return)) _a.call(unexpandedPlays_1);
+            }
+            finally { if (e_1) throw e_1.error; }
+        }
+        var e_1, _a;
+    }
+    /**
+     * Get the MonteCarloNode corresponding to the given play.
+     * @param {number} play - The play leading to the child node.
+     * @return {MonteCarloNode} The child node corresponding to the play given.
+     */
+    MonteCarloNode.prototype.childNode = function (play) {
+        var child = this.children.get(play.hash());
+        if (child === undefined) {
+            throw new Error('No such play!');
+        }
+        else if (child.node === null) {
+            throw new Error("Child is not expanded!");
+        }
+        return child.node;
+    };
+    /**
+     * Expand the specified child play and return the new child node.
+     * Add the node to the array of children nodes.
+     * Remove the play from the array of unexpanded plays.
+     * @param {Play} play - The play to expand.
+     * @param {State} childState - The child state corresponding to the given play.
+     * @param {Play[]} unexpandedPlays - The given child's unexpanded child plays; typically all of them.
+     * @return {MonteCarloNode} The new child node.
+     */
+    MonteCarloNode.prototype.expand = function (play, childState, unexpandedPlays) {
+        if (!this.children.has(play.hash())) {
+            throw new Error("No such play!");
+        }
+        var childNode = new MonteCarloNode(this, play, childState, unexpandedPlays);
+        this.children.set(play.hash(), { play: play, node: childNode });
+        return childNode;
+    };
+    /**
+     * Get all legal plays from this node.
+     * @return {Play[]} All plays.
+     */
+    MonteCarloNode.prototype.allPlays = function () {
+        var ret = [];
+        try {
+            for (var _a = __values(this.children.values()), _b = _a.next(); !_b.done; _b = _a.next()) {
+                var child = _b.value;
+                ret.push(child.play);
+            }
+        }
+        catch (e_2_1) { e_2 = { error: e_2_1 }; }
+        finally {
+            try {
+                if (_b && !_b.done && (_c = _a.return)) _c.call(_a);
+            }
+            finally { if (e_2) throw e_2.error; }
+        }
+        return ret;
+        var e_2, _c;
+    };
+    /**
+     * Get all unexpanded legal plays from this node.
+     * @return {Play[]} All unexpanded plays.
+     */
+    MonteCarloNode.prototype.unexpandedPlays = function () {
+        var ret = [];
+        try {
+            for (var _a = __values(this.children.values()), _b = _a.next(); !_b.done; _b = _a.next()) {
+                var child = _b.value;
+                if (child.node === null) {
+                    ret.push(child.play);
+                }
+            }
+        }
+        catch (e_3_1) { e_3 = { error: e_3_1 }; }
+        finally {
+            try {
+                if (_b && !_b.done && (_c = _a.return)) _c.call(_a);
+            }
+            finally { if (e_3) throw e_3.error; }
+        }
+        return ret;
+        var e_3, _c;
+    };
+    /**
+     * Whether this node is fully expanded.
+     * @return {boolean} Whether this node is fully expanded.
+     */
+    MonteCarloNode.prototype.isFullyExpanded = function () {
+        try {
+            for (var _a = __values(this.children.values()), _b = _a.next(); !_b.done; _b = _a.next()) {
+                var child = _b.value;
+                if (child.node === null) {
+                    return false;
+                }
+            }
+        }
+        catch (e_4_1) { e_4 = { error: e_4_1 }; }
+        finally {
+            try {
+                if (_b && !_b.done && (_c = _a.return)) _c.call(_a);
+            }
+            finally { if (e_4) throw e_4.error; }
+        }
+        return true;
+        var e_4, _c;
+    };
+    /**
+     * Whether this node is terminal in the game tree, NOT INCLUSIVE of termination due to winning.
+     * @return {boolean} Whether this node is a leaf in the tree.
+     */
+    MonteCarloNode.prototype.isLeaf = function () {
+        if (this.children.size === 0) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    };
+    /**
+     * Get the UCB1 value for this node.
+     * @param {number} biasParam - The square of the bias parameter in the UCB1 algorithm, defaults to 2.
+     * @return {number} The UCB1 value of this node.
+     */
+    MonteCarloNode.prototype.getUCB1 = function (biasParam) {
+        return (this.n_wins / this.n_plays) + Math.sqrt(biasParam * Math.log(this.parent.n_plays) / this.n_plays);
+    };
+    return MonteCarloNode;
+}());
+
+//# sourceMappingURL=monte-carlo-node.js.map
+
+/***/ }),
+
+/***/ 270:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(33);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(189);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(192);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_tabs_tabs__ = __webpack_require__(193);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(27);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(191);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(194);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_tabs_tabs__ = __webpack_require__(195);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -299,16 +904,107 @@ var MyApp = /** @class */ (function () {
         });
     }
     MyApp = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"E:\School1\NodesAP\Interstellar\src\app\app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"E:\School1\NodesAP\Interstellar\src\app\app.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"C:\BouletAP\MyOwn\Interstellar_Final\Interstellar\src\app\app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n\n'/*ion-inline-end:"C:\BouletAP\MyOwn\Interstellar_Final\Interstellar\src\app\app.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
     ], MyApp);
     return MyApp;
 }());
 
 //# sourceMappingURL=app.component.js.map
 
+/***/ }),
+
+/***/ 99:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Connect4Page; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__connect4a__ = __webpack_require__(247);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__monte_carlo__ = __webpack_require__(251);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(27);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var Connect4Page = /** @class */ (function () {
+    function Connect4Page(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.currentPlayer = {
+            color: "",
+            name: "",
+            move: ""
+        };
+    }
+    Connect4Page.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad Connect4Page');
+    };
+    Connect4Page.prototype.startGame = function () {
+        this.game = new __WEBPACK_IMPORTED_MODULE_0__connect4a__["a" /* GameC4 */]();
+        this.mcts = new __WEBPACK_IMPORTED_MODULE_1__monte_carlo__["a" /* MonteCarlo */](this.game);
+        this.state = this.game.start();
+        this.winner = this.game.winner(this.state);
+        this.theBoard = this.state.board.map(function (row) { return row.map(function (cell) { return cell === -1 ? 2 : cell; }); });
+        this.playMove();
+    };
+    Connect4Page.prototype.playMove = function (col) {
+        // From initial state, play games until end
+        if (!this.winner) {
+            // console.log();
+            // console.log('player: ' + (state.player === 1 ? 1 : 2));
+            // console.log(state.board.map((row: any) => row.map((cell: any) => cell === -1 ? 2 : cell)));
+            this.mcts.runSearch(this.state, 1);
+            var stats = this.mcts.getStats(this.state);
+            // console.log(util.inspect(stats, {showHidden: false, depth: null}));
+            var play = this.mcts.bestPlay(this.state, 'robust');
+            // Afficher ces coordonnees dans le board
+            var playerId = this.state.player;
+            if (playerId === 1) {
+                this.currentPlayer.name = "Player 2";
+                this.currentWinner = "Player 1";
+                this.currentPlayer.color = "orange";
+            }
+            else {
+                this.currentPlayer.name = "Player 1";
+                this.currentWinner = "Player 2";
+                this.currentPlayer.color = "purple";
+            }
+            if (col !== undefined) {
+                play.col = "" + col;
+                for (var row = 0; row < 6; row++) {
+                    if (this.theBoard[row][col] === 0) {
+                        play.row = row;
+                    }
+                }
+            }
+            this.state = this.game.nextGameState(this.state, play);
+            this.winner = this.game.winner(this.state);
+            this.theBoard = this.state.board.map(function (row) { return row.map(function (cell) { return cell === -1 ? 2 : cell; }); });
+        }
+    };
+    Connect4Page = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["m" /* Component */])({
+            selector: 'page-connect4',template:/*ion-inline-start:"C:\BouletAP\MyOwn\Interstellar_Final\Interstellar\src\pages\connect4\connect4.html"*/'<!--\n  Generated template for the Connect4Page page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Connect4</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n    <section>\n        <a href="javascript:;" (click)="startGame()"  class="btn btn-start ai"><ion-icon name="ionitron"></ion-icon> Démarrer une partie AI</a>\n    </section>\n\n    <section class="tictactoe" *ngIf="game">\n            \n        <div class="col-12">    \n            <h2>Affrontement entre <span class="player1_name">Player 1</span> et <span class="player2_name">Player 2</span></h2>\n            <p>\n              <a (click)="playMove()">\n                <ion-icon slot="icon-only" name="more"></ion-icon> Play an AI move\n              </a>\n            </p>\n            <h4 *ngIf="!this.winner" [style.color]="currentPlayer.color">Au tour de {{ currentPlayer.name }} de jouer.</h4>\n            <h4 *ngIf="this.winner" [style.color]="green">Le gagnant est {{ currentWinner }}</h4>\n        </div>\n\n        <table class="board">\n            <tr *ngFor="let row of theBoard">   \n\n                <td class="center  cell-{{col}}" *ngFor="let col of row; index as i">\n                    <a (click)="playMove(i)" href="javascript:;"  class="case px2 px7">\n                        <span class="cell">{{ col }}</span>\n                    </a>\n                </td>\n\n            </tr>\n        </table>\n            \n    </section>\n</ion-content>\n'/*ion-inline-end:"C:\BouletAP\MyOwn\Interstellar_Final\Interstellar\src\pages\connect4\connect4.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["f" /* NavParams */]])
+    ], Connect4Page);
+    return Connect4Page;
+}());
+
+//# sourceMappingURL=connect4.js.map
+
 /***/ })
 
-},[197]);
+},[199]);
 //# sourceMappingURL=main.js.map

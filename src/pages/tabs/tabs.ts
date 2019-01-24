@@ -1,3 +1,4 @@
+import { Connect4Page } from './../connect4/connect4';
 import { Component } from '@angular/core';
 
 import { AboutPage } from '../about/about';
@@ -11,7 +12,8 @@ export class TabsPage {
 
   tab1Root = HomePage;
   tab2Root = AboutPage;
-  tab3Root = ContactPage;
+  tab3Root = Connect4Page;
+  tab4Root = ContactPage;
 
   constructor() {
 

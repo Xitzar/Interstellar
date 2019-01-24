@@ -1,0 +1,48 @@
+<!--
+  Generated template for the Connect4Page page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Connect4</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+
+<ion-content padding>
+    <section>
+        <a href="javascript:;" (click)="startGame()"  class="btn btn-start ai"><ion-icon name="ionitron"></ion-icon> Démarrer une partie AI</a>
+    </section>
+
+    <section class="tictactoe" *ngIf="game">
+            
+        <div class="col-12">    
+            <h2>Affrontement entre <span class="player1_name">Player 1</span> et <span class="player2_name">Player 2</span></h2>
+            <p>
+              <a (click)="playMove()">
+                <ion-icon slot="icon-only" name="more"></ion-icon> Play an AI move
+              </a>
+            </p>
+            <h4 *ngIf="!this.winner" [style.color]="currentPlayer.color">Au tour de {{ currentPlayer.name }} de jouer.</h4>
+            <h4 *ngIf="this.winner" [style.color]="green">Le gagnant est {{ currentWinner }}</h4>
+        </div>
+
+        <table class="board">
+            <tr *ngFor="let row of theBoard">   
+
+                <td class="center  cell-{{col}}" *ngFor="let col of row; index as i">
+                    <a (click)="playMove(i)" href="javascript:;"  class="case px2 px7">
+                        <span class="cell">{{ col }}</span>
+                    </a>
+                </td>
+
+            </tr>
+        </table>
+            
+    </section>
+</ion-content>

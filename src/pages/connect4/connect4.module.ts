@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
-import { Connect4Page } from './connect4';
+import { Connect4Game } from './connect4';
 
 @NgModule({
   declarations: [
-    Connect4Page,
+    Connect4Game,
   ],
   imports: [
-    IonicPageModule.forChild(Connect4Page),
+    IonicPageModule.forChild(Connect4Game),
   ],
 })
 export class Connect4PageModule {}

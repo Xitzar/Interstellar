@@ -1,14 +1,15 @@
 import { GameC4 as Game } from "./connect4a";
 import { MonteCarlo } from "./monte-carlo";
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-connect4',
+  selector: 'connect4',
   templateUrl: 'connect4.html',
 })
-export class Connect4Page {
+export class Connect4Game implements OnInit {
+ 
 
   items: any;
   currentPlayer:any;
@@ -27,9 +28,10 @@ export class Connect4Page {
     };
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad Connect4Page');
+  ngOnInit(): void {
+    this.startGame();
   }
+ 
 
   startGame() {
     this.game = new Game();
@@ -38,15 +40,9 @@ export class Connect4Page {
     this.winner = this.game.winner(this.state);
     this.theBoard = this.state.board.map((row: any) => row.map((cell: any) => cell === -1 ? 2 : cell));
     this.playMove();
-   }
-
-
-
-
-
+  }
    
-   
-   playMove(col?:any) {
+  playMove(col?:any) {
     
     // From initial state, play games until end
     if( !this.winner ) {
@@ -56,23 +52,24 @@ export class Connect4Page {
       this.mcts.runSearch(this.state, 1);
       let stats = this.mcts.getStats(this.state);
       // console.log(util.inspect(stats, {showHidden: false, depth: null}));
+      //console.log(stats);
       let play = this.mcts.bestPlay(this.state, 'robust');
-
+    
       // Afficher ces coordonnees dans le board
       let playerId = this.state.player;
-
+    
       if( playerId === 1 ) {
         this.currentPlayer.name = "Player 2";
-        this.currentWinner = "Player 1";
+        this.currentWinner = "l'ordinateur";
         this.currentPlayer.color = "orange";
         
       } else {
-        this.currentPlayer.name = "Player 1";
+        this.currentPlayer.name = "l'ordinateur";
         this.currentWinner = "Player 2";
         this.currentPlayer.color = "purple";
-
+    
       }
-
+    
       if( col !== undefined ) {
         play.col = ""+col;
         for(let row=0;row<6;row++) {
@@ -81,15 +78,24 @@ export class Connect4Page {
           }
         }
       }
-
+    
       this.state = this.game.nextGameState(this.state, play);
       this.winner = this.game.winner(this.state);
-
-
+    
+    
       this.theBoard = this.state.board.map((row: any) => row.map((cell: any) => cell === -1 ? 2 : cell));
-
-
+    
+      this.automatedMoveMaybe();
     } 
-   }
+  }
+
+  automatedMoveMaybe() {
+  
+    setTimeout( () => {
+      if (this.currentPlayer.name === "l'ordinateur") {
+        this.playMove();
+      }
+    }, 200);
+  }
 
 }

@@ -1,9 +1,8 @@
-import { Connect4Page } from './../connect4/connect4';
 import { Component } from '@angular/core';
 
-import { AboutPage } from '../about/about';
-import { ContactPage } from '../contact/contact';
 import { HomePage } from '../home/home';
+import { GameArenaPage } from './../game-arena/game-arena';
+import { ProfilePage } from '../profile/profile';
 
 @Component({
   templateUrl: 'tabs.html'
@@ -11,9 +10,8 @@ import { HomePage } from '../home/home';
 export class TabsPage {
 
   tab1Root = HomePage;
-  tab2Root = AboutPage;
-  tab3Root = Connect4Page;
-  tab4Root = ContactPage;
+  tab2Root = GameArenaPage;
+  tab3Root = ProfilePage;
 
   constructor() {
 

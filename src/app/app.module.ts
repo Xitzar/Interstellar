@@ -1,3 +1,4 @@
+import { ProfilePage } from './../pages/profile/profile';
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
@@ -10,17 +11,19 @@ import { TabsPage } from '../pages/tabs/tabs';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { Connect4Page } from '../pages/connect4/connect4';
+import { Connect4Game } from '../pages/connect4/connect4';
+import { GameArenaPage } from '../pages/game-arena/game-arena';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
     MyApp,
     AboutPage,
-    ContactPage,
+    ProfilePage,
     HomePage,
-    HomePage,
-    Connect4Page,
-    TabsPage
+    GameArenaPage,
+    TabsPage,
+    Connect4Game
   ],
   imports: [
     BrowserModule,
@@ -30,8 +33,8 @@ import { Connect4Page } from '../pages/connect4/connect4';
   entryComponents: [
     MyApp,
     AboutPage,
-    ContactPage,
-    Connect4Page,
+    ProfilePage,    
+    GameArenaPage,
     HomePage,
     TabsPage
   ],

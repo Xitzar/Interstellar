@@ -25727,19 +25727,3 @@ connect4 .board td {
 connect4 .board td.cell-0 a {
   color: #FFF;
 }
-
-connect4 .board td.cell-1 {
-  background-color: purple;
-}
-
-connect4 .board td.cell-1 a {
-  color: purple;
-}
-
-connect4 .board td.cell-2 {
-  background-color: orange;
-}
-
-connect4 .board td.cell-2 a {
-  color: orange;
-}

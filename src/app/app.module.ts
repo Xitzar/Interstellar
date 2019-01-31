@@ -14,6 +14,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { Connect4Game } from '../pages/connect4/connect4';
 import { GameArenaPage } from '../pages/game-arena/game-arena';
 import { CommonModule } from '@angular/common';
+import { ArenaServiceProvider } from '../providers/arena-service/arena-service';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { CommonModule } from '@angular/common';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    ArenaServiceProvider
   ]
 })
 export class AppModule {}

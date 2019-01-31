@@ -7,18 +7,20 @@
         <ion-card-content>
             
             <h4 *ngIf="!this.winner" [style.color]="currentPlayer.color">Au tour de {{ currentPlayer.name }} de jouer.</h4>
-            <h4 *ngIf="this.winner" [style.color]="green">Le gagnant est {{ currentWinner }}</h4>
+            <h4 *ngIf="this.winner" [style.color]="yellow">Le gagnant est {{ currentWinner.name }}</h4>
 
             <table class="board">
                 <tr *ngFor="let row of theBoard">   
-                    <td class="center  cell-{{col}}" *ngFor="let col of row; index as i">
-                        <a (click)="playMove(i)" href="javascript:;"  class="case px2 px7">
+                    <td class="center  cell-{{col}}" *ngFor="let col of row; index as i" [style.backgroundColor]="getCellColor(col)">
+                        <a (click)="playerMove(i)" href="javascript:;"  class="case px2 px7" [style.color]="getCellColor(col)">
                             <span class="cell">{{ col }}</span>
                         </a>
                     </td>
                 </tr>
             </table>
-        
+            <button ion-button (click)="initGame(3)">
+              Bot
+            </button>
         </ion-card-content>
     </ion-card>
 

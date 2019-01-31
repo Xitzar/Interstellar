@@ -1,5 +1,8 @@
+import { ArenaServiceProvider } from './../../providers/arena-service/arena-service';
+import { Connect4Game } from './../connect4/connect4';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Observable } from 'rxjs/Observable';
 
 /**
  * Generated class for the GameArenaPage page.
@@ -15,11 +18,22 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class GameArenaPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  gameListener: Observable<any>;
+  constructor(
+    public navCtrl: NavController, 
+    public navParams: NavParams,
+    ) {
+
+    this.gameListener = new Observable<any>();
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad GameArenaPage');
+  }
+
+  resetGame() {
+    //private arenaGame: ArenaServiceProvider
+    //this.arenaGame.resetGame();
   }
 
 }

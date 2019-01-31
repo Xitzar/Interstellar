@@ -1,12 +1,12 @@
 webpackJsonp([4],{
 
-/***/ 100:
+/***/ 102:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProfilePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(25);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -45,7 +45,7 @@ var ProfilePage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 110:
+/***/ 114:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -58,28 +58,28 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 110;
+webpackEmptyAsyncContext.id = 114;
 
 /***/ }),
 
-/***/ 152:
+/***/ 155:
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
 	"../pages/connect4/connect4.module": [
-		279,
+		287,
 		3
 	],
 	"../pages/e-tv/e-tv.module": [
-		280,
+		288,
 		0
 	],
 	"../pages/game-arena/game-arena.module": [
-		281,
+		289,
 		2
 	],
 	"../pages/profile/profile.module": [
-		282,
+		290,
 		1
 	]
 };
@@ -94,20 +94,20 @@ function webpackAsyncContext(req) {
 webpackAsyncContext.keys = function webpackAsyncContextKeys() {
 	return Object.keys(map);
 };
-webpackAsyncContext.id = 152;
+webpackAsyncContext.id = 155;
 module.exports = webpackAsyncContext;
 
 /***/ }),
 
-/***/ 196:
+/***/ 199:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TabsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__home_home__ = __webpack_require__(197);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__home_home__ = __webpack_require__(200);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__game_arena_game_arena__ = __webpack_require__(50);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__profile_profile__ = __webpack_require__(100);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__profile_profile__ = __webpack_require__(102);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -139,13 +139,13 @@ var TabsPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 197:
+/***/ 200:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(25);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__game_arena_game_arena__ = __webpack_require__(50);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -168,7 +168,7 @@ var HomePage = /** @class */ (function () {
     };
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"C:\BouletAP\MyOwn\Interstellar_Final\Interstellar\src\pages\home\home.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>Home</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n  <h2>Welcome to Game Haven !</h2>\n\n  \n\n  <h3>Use an option below to discover the full power of online gaming !!</h3>\n\n\n\n\n\n\n\n  <ion-grid>\n\n    <ion-row>\n\n      <ion-col class="centering" col-12 col-sm-8 col-md-6 col-xl-4>\n\n\n\n        <ion-card>\n\n          <img src="http://lorempixel.com/400/200/sports/"/>\n\n          <ion-card-content>\n\n            \n\n            <ion-card-title>\n\n              Take a seat and play a game of connect 4 on us !\n\n            </ion-card-title>\n\n            \n\n            <p>\n\n              Have fun\n\n            </p>\n\n\n\n            <button ion-button (click)="startGame()"  class="btn btn-start ai">\n\n              Démarrer une partie AI\n\n            </button>\n\n          </ion-card-content>\n\n\n\n        </ion-card>\n\n\n\n\n\n      </ion-col>\n\n\n\n    </ion-row>\n\n  </ion-grid>\n\n\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\BouletAP\MyOwn\Interstellar_Final\Interstellar\src\pages\home\home.html"*/
+            selector: 'page-home',template:/*ion-inline-start:"C:\BouletAP\MyOwn\Interstellar_Final\Interstellar\src\pages\home\home.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>Home</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n  <h2>Welcome to Game Haven !</h2>\n\n  \n\n  <h3>Use an option below to discover the full power of online gaming !!</h3>\n\n\n\n\n\n\n\n  <ion-grid>\n\n    <ion-row>\n\n      <ion-col class="centering" col-12 col-sm-8 col-md-6 col-xl-4>\n\n\n\n        <ion-card>\n\n          <div class="arena-preview">\n\n            <connect4 [game-type]="2"></connect4>\n\n          </div>\n\n          <ion-card-content>\n\n            \n\n            <ion-card-title>\n\n              Take a seat and play a game of connect 4 on us !\n\n            </ion-card-title>\n\n            \n\n            <p>\n\n              Have fun\n\n            </p>\n\n\n\n            <button ion-button (click)="startGame()"  class="btn btn-start ai">\n\n              Démarrer une partie\n\n            </button>\n\n          </ion-card-content>\n\n\n\n        </ion-card>\n\n\n\n\n\n      </ion-col>\n\n\n\n    </ion-row>\n\n  </ion-grid>\n\n\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\BouletAP\MyOwn\Interstellar_Final\Interstellar\src\pages\home\home.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */]])
     ], HomePage);
@@ -179,15 +179,16 @@ var HomePage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 198:
+/***/ 201:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Connect4Game; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__connect4a__ = __webpack_require__(247);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__monte_carlo__ = __webpack_require__(251);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__user__ = __webpack_require__(254);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__connect4a__ = __webpack_require__(255);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__monte_carlo__ = __webpack_require__(259);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular__ = __webpack_require__(25);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -197,6 +198,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __values = (this && this.__values) || function (o) {
+    var m = typeof Symbol === "function" && o[Symbol.iterator], i = 0;
+    if (m) return m.call(o);
+    return {
+        next: function () {
+            if (o && i >= o.length) o = void 0;
+            return { value: o && o[i++], done: !o };
+        }
+    };
+};
+
 
 
 
@@ -205,88 +217,176 @@ var Connect4Game = /** @class */ (function () {
     function Connect4Game(navCtrl, navParams) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
-        this.currentPlayer = {
-            color: "",
-            name: "",
-            move: ""
-        };
+        this.players = [];
     }
     Connect4Game.prototype.ngOnInit = function () {
+        this.initGame(0);
+    };
+    Connect4Game.prototype.initGame = function (gameType) {
+        if (gameType === 3) {
+            this.initBots();
+        }
+        else {
+            this.initPlayers();
+        }
         this.startGame();
+        if (gameType === 3) {
+            this.playBotMove();
+        }
+    };
+    Connect4Game.prototype.ngOnDestroy = function () {
+        this.winner = 1;
+    };
+    Connect4Game.prototype.initBots = function () {
+        var player1 = new __WEBPACK_IMPORTED_MODULE_0__user__["a" /* User */]();
+        player1.id = 1;
+        player1.name = "Henry";
+        player1.color = "blue";
+        player1.isBot = true;
+        this.players.push(player1);
+        var player2 = new __WEBPACK_IMPORTED_MODULE_0__user__["a" /* User */]();
+        player2.id = -1;
+        player2.name = "Gertrude";
+        player2.color = "green";
+        player2.isBot = true;
+        this.players.push(player2);
+    };
+    Connect4Game.prototype.initPlayers = function () {
+        var player1 = new __WEBPACK_IMPORTED_MODULE_0__user__["a" /* User */]();
+        player1.id = 1;
+        player1.name = "Player 1";
+        player1.color = "purple";
+        player1.isBot = false;
+        this.players.push(player1);
+        var player2 = new __WEBPACK_IMPORTED_MODULE_0__user__["a" /* User */]();
+        player2.id = -1;
+        player2.name = "Player 2";
+        player2.color = "pink";
+        player2.isBot = true;
+        this.players.push(player2);
     };
     Connect4Game.prototype.startGame = function () {
-        this.game = new __WEBPACK_IMPORTED_MODULE_0__connect4a__["a" /* GameC4 */]();
-        this.mcts = new __WEBPACK_IMPORTED_MODULE_1__monte_carlo__["a" /* MonteCarlo */](this.game);
+        this.game = new __WEBPACK_IMPORTED_MODULE_1__connect4a__["a" /* GameC4 */]();
+        this.mcts = new __WEBPACK_IMPORTED_MODULE_2__monte_carlo__["a" /* MonteCarlo */](this.game);
         this.state = this.game.start();
         this.winner = this.game.winner(this.state);
         this.theBoard = this.state.board.map(function (row) { return row.map(function (cell) { return cell === -1 ? 2 : cell; }); });
-        this.playMove();
+        this.setupRandomPlayer();
     };
-    Connect4Game.prototype.playMove = function (col) {
-        // From initial state, play games until end
-        if (!this.winner) {
-            // console.log();
-            // console.log('player: ' + (state.player === 1 ? 1 : 2));
-            // console.log(state.board.map((row: any) => row.map((cell: any) => cell === -1 ? 2 : cell)));
-            this.mcts.runSearch(this.state, 1);
-            var stats = this.mcts.getStats(this.state);
-            // console.log(util.inspect(stats, {showHidden: false, depth: null}));
-            //console.log(stats);
-            var play = this.mcts.bestPlay(this.state, 'robust');
-            // Afficher ces coordonnees dans le board
-            var playerId = this.state.player;
-            if (playerId === 1) {
-                this.currentPlayer.name = "Player 2";
-                this.currentWinner = "l'ordinateur";
-                this.currentPlayer.color = "orange";
-            }
-            else {
-                this.currentPlayer.name = "l'ordinateur";
-                this.currentWinner = "Player 2";
-                this.currentPlayer.color = "purple";
-            }
-            if (col !== undefined) {
-                play.col = "" + col;
-                for (var row = 0; row < 6; row++) {
-                    if (this.theBoard[row][col] === 0) {
-                        play.row = row;
-                    }
+    Connect4Game.prototype.getCellColor = function (colValue) {
+        if (colValue === 2)
+            colValue = -1;
+        try {
+            for (var _a = __values(this.players), _b = _a.next(); !_b.done; _b = _a.next()) {
+                var u = _b.value;
+                if (u.id === colValue) {
+                    return u.color;
                 }
             }
-            this.state = this.game.nextGameState(this.state, play);
-            this.winner = this.game.winner(this.state);
-            this.theBoard = this.state.board.map(function (row) { return row.map(function (cell) { return cell === -1 ? 2 : cell; }); });
-            this.automatedMoveMaybe();
+        }
+        catch (e_1_1) { e_1 = { error: e_1_1 }; }
+        finally {
+            try {
+                if (_b && !_b.done && (_c = _a.return)) _c.call(_a);
+            }
+            finally { if (e_1) throw e_1.error; }
+        }
+        var e_1, _c;
+    };
+    Connect4Game.prototype.setupRandomPlayer = function () {
+        this.players[0].id = 0;
+        this.players[1].id = 0;
+        this.currentPlayer = this.players[Math.floor(Math.random() * this.players.length)];
+        this.currentPlayer.id = 1;
+        this.players[0].id = this.currentPlayer.name == this.players[0].name ? 1 : -1;
+        this.players[1].id = this.currentPlayer.name == this.players[1].name ? 1 : -1;
+    };
+    Connect4Game.prototype.getMonteCarloPlay = function () {
+        this.mcts.runSearch(this.state, 1);
+        var play = this.mcts.bestPlay(this.state, 'robust');
+        return play;
+    };
+    Connect4Game.prototype.playerMove = function (col) {
+        var move = {
+            col: "" + col,
+            row: 0
+        };
+        for (var row = 0; row < 6; row++) {
+            if (this.theBoard[row][col] === 0) {
+                move.row = row;
+            }
+        }
+        this.playMove(move);
+    };
+    Connect4Game.prototype.playBotMove = function () {
+        if (!this.winner) {
+            var move = this.getMonteCarloPlay();
+            this.playMove(move);
         }
     };
-    Connect4Game.prototype.automatedMoveMaybe = function () {
-        var _this = this;
-        setTimeout(function () {
-            if (_this.currentPlayer.name === "l'ordinateur") {
-                _this.playMove();
-            }
-        }, 200);
+    Connect4Game.prototype.playMove = function (move) {
+        if (!this.winner) {
+            this.state = this.game.nextGameState(this.state, move);
+            this.winner = this.game.winner(this.state);
+            this.theBoard = this.state.board.map(function (row) { return row.map(function (cell) { return cell === -1 ? 2 : cell; }); });
+            this.initNextPlayerAndWinnerByPlayerId(this.state.player);
+            this.playBotMoveMaybe();
+        }
     };
+    Connect4Game.prototype.playBotMoveMaybe = function () {
+        var _this = this;
+        if (this.currentPlayer.isBot) {
+            setTimeout(function () {
+                _this.playBotMove();
+            }, 200);
+        }
+    };
+    Connect4Game.prototype.initNextPlayerAndWinnerByPlayerId = function (currentPlayerId) {
+        try {
+            for (var _a = __values(this.players), _b = _a.next(); !_b.done; _b = _a.next()) {
+                var user = _b.value;
+                if (user.id === currentPlayerId) {
+                    this.currentPlayer = user;
+                }
+                else {
+                    this.currentWinner = user;
+                }
+            }
+        }
+        catch (e_2_1) { e_2 = { error: e_2_1 }; }
+        finally {
+            try {
+                if (_b && !_b.done && (_c = _a.return)) _c.call(_a);
+            }
+            finally { if (e_2) throw e_2.error; }
+        }
+        var e_2, _c;
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["D" /* Input */])('game-type'),
+        __metadata("design:type", Number)
+    ], Connect4Game.prototype, "gameType", void 0);
     Connect4Game = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["m" /* Component */])({
-            selector: 'connect4',template:/*ion-inline-start:"C:\BouletAP\MyOwn\Interstellar_Final\Interstellar\src\pages\connect4\connect4.html"*/'<div class="connect4-module">\n\n    <ion-card *ngIf="game">\n        \n        <h2>Affrontement entre <span class="player1_name">Player 1</span> et <span class="player2_name">Player 2</span></h2>\n        \n        <ion-card-content>\n            \n            <h4 *ngIf="!this.winner" [style.color]="currentPlayer.color">Au tour de {{ currentPlayer.name }} de jouer.</h4>\n            <h4 *ngIf="this.winner" [style.color]="green">Le gagnant est {{ currentWinner }}</h4>\n\n            <table class="board">\n                <tr *ngFor="let row of theBoard">   \n                    <td class="center  cell-{{col}}" *ngFor="let col of row; index as i">\n                        <a (click)="playMove(i)" href="javascript:;"  class="case px2 px7">\n                            <span class="cell">{{ col }}</span>\n                        </a>\n                    </td>\n                </tr>\n            </table>\n        \n        </ion-card-content>\n    </ion-card>\n\n\n</div>'/*ion-inline-end:"C:\BouletAP\MyOwn\Interstellar_Final\Interstellar\src\pages\connect4\connect4.html"*/,
+        Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["m" /* Component */])({
+            selector: 'connect4',template:/*ion-inline-start:"C:\BouletAP\MyOwn\Interstellar_Final\Interstellar\src\pages\connect4\connect4.html"*/'<div class="connect4-module">\n\n    <ion-card *ngIf="game">\n        \n        <h2>Affrontement entre <span class="player1_name">Player 1</span> et <span class="player2_name">Player 2</span></h2>\n        \n        <ion-card-content>\n            \n            <h4 *ngIf="!this.winner" [style.color]="currentPlayer.color">Au tour de {{ currentPlayer.name }} de jouer.</h4>\n            <h4 *ngIf="this.winner" [style.color]="yellow">Le gagnant est {{ currentWinner.name }}</h4>\n\n            <table class="board">\n                <tr *ngFor="let row of theBoard">   \n                    <td class="center  cell-{{col}}" *ngFor="let col of row; index as i" [style.backgroundColor]="getCellColor(col)">\n                        <a (click)="playerMove(i)" href="javascript:;"  class="case px2 px7" [style.color]="getCellColor(col)">\n                            <span class="cell">{{ col }}</span>\n                        </a>\n                    </td>\n                </tr>\n            </table>\n            <button ion-button (click)="initGame(3)">\n              Bot\n            </button>\n        </ion-card-content>\n    </ion-card>\n\n\n</div>'/*ion-inline-end:"C:\BouletAP\MyOwn\Interstellar_Final\Interstellar\src\pages\connect4\connect4.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["f" /* NavParams */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["e" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["e" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["f" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["f" /* NavParams */]) === "function" && _b || Object])
     ], Connect4Game);
     return Connect4Game;
+    var _a, _b;
 }());
 
 //# sourceMappingURL=connect4.js.map
 
 /***/ }),
 
-/***/ 199:
+/***/ 202:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(200);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(222);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(203);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(223);
 
 
 Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
@@ -294,29 +394,31 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 
 /***/ }),
 
-/***/ 222:
+/***/ 223:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__pages_profile_profile__ = __webpack_require__(100);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__pages_profile_profile__ = __webpack_require__(102);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__ = __webpack_require__(31);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(24);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_component__ = __webpack_require__(270);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_about_about__ = __webpack_require__(278);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_home_home__ = __webpack_require__(197);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_tabs_tabs__ = __webpack_require__(196);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_native_status_bar__ = __webpack_require__(192);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ionic_native_splash_screen__ = __webpack_require__(195);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_connect4_connect4__ = __webpack_require__(198);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_component__ = __webpack_require__(278);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_about_about__ = __webpack_require__(286);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_home_home__ = __webpack_require__(200);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_tabs_tabs__ = __webpack_require__(199);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_native_status_bar__ = __webpack_require__(195);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ionic_native_splash_screen__ = __webpack_require__(198);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_connect4_connect4__ = __webpack_require__(201);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_game_arena_game_arena__ = __webpack_require__(50);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__providers_arena_service_arena_service__ = __webpack_require__(79);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -366,7 +468,8 @@ var AppModule = /** @class */ (function () {
             providers: [
                 __WEBPACK_IMPORTED_MODULE_8__ionic_native_status_bar__["a" /* StatusBar */],
                 __WEBPACK_IMPORTED_MODULE_9__ionic_native_splash_screen__["a" /* SplashScreen */],
-                { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["u" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["b" /* IonicErrorHandler */] }
+                { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["u" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["b" /* IonicErrorHandler */] },
+                __WEBPACK_IMPORTED_MODULE_12__providers_arena_service_arena_service__["a" /* ArenaServiceProvider */]
             ]
         })
     ], AppModule);
@@ -377,14 +480,29 @@ var AppModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 247:
+/***/ 254:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return User; });
+var User = /** @class */ (function () {
+    function User() {
+    }
+    return User;
+}());
+
+//# sourceMappingURL=user.js.map
+
+/***/ }),
+
+/***/ 255:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GameC4; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__gamestate__ = __webpack_require__(248);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__gameplay__ = __webpack_require__(249);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(250);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__gamestate__ = __webpack_require__(256);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__gameplay__ = __webpack_require__(257);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(258);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
 var __values = (this && this.__values) || function (o) {
     var m = typeof Symbol === "function" && o[Symbol.iterator], i = 0;
@@ -527,7 +645,7 @@ var GameC4 = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 248:
+/***/ 256:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -552,7 +670,7 @@ var GameState = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 249:
+/***/ 257:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -576,12 +694,12 @@ var GamePlay = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 251:
+/***/ 259:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MonteCarlo; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__monte_carlo_node__ = __webpack_require__(252);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__monte_carlo_node__ = __webpack_require__(260);
 var __values = (this && this.__values) || function (o) {
     var m = typeof Symbol === "function" && o[Symbol.iterator], i = 0;
     if (m) return m.call(o);
@@ -789,7 +907,7 @@ var MonteCarlo = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 252:
+/***/ 260:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -964,16 +1082,16 @@ var MonteCarloNode = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 270:
+/***/ 278:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(24);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(192);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(195);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_tabs_tabs__ = __webpack_require__(196);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(195);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(198);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_tabs_tabs__ = __webpack_require__(199);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1010,13 +1128,13 @@ var MyApp = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 278:
+/***/ 286:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AboutPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(25);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1051,7 +1169,9 @@ var AboutPage = /** @class */ (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GameArenaPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1061,6 +1181,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 /**
@@ -1073,22 +1194,74 @@ var GameArenaPage = /** @class */ (function () {
     function GameArenaPage(navCtrl, navParams) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
+        this.gameListener = new __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__["Observable"]();
     }
     GameArenaPage.prototype.ionViewDidLoad = function () {
         console.log('ionViewDidLoad GameArenaPage');
     };
+    GameArenaPage.prototype.resetGame = function () {
+        //private arenaGame: ArenaServiceProvider
+        //this.arenaGame.resetGame();
+    };
     GameArenaPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-game-arena',template:/*ion-inline-start:"C:\BouletAP\MyOwn\Interstellar_Final\Interstellar\src\pages\game-arena\game-arena.html"*/'<!--\n  Generated template for the GameArenaPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Game Arena</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>  \n\n  <ion-grid>\n    <ion-row>\n      <ion-col class="centering" col-12 col-sm-8 col-md-6 col-xl-4>\n      \n        <connect4></connect4>\n\n      </ion-col>\n\n    </ion-row>\n  </ion-grid>\n    \n</ion-content>\n'/*ion-inline-end:"C:\BouletAP\MyOwn\Interstellar_Final\Interstellar\src\pages\game-arena\game-arena.html"*/,
+            selector: 'page-game-arena',template:/*ion-inline-start:"C:\BouletAP\MyOwn\Interstellar_Final\Interstellar\src\pages\game-arena\game-arena.html"*/'<!--\n  Generated template for the GameArenaPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Game Arena</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>  \n\n  <ion-grid>\n    <ion-row>\n      <ion-col class="centering" col-12 col-sm-8 col-md-6 col-xl-4>\n      \n        <connect4></connect4>\n\n        <button ion-button (click)="resetGame()"  class="btn">\n          Recommencer la partie\n        </button>\n      </ion-col>\n\n    </ion-row>\n  </ion-grid>\n    \n</ion-content>\n'/*ion-inline-end:"C:\BouletAP\MyOwn\Interstellar_Final\Interstellar\src\pages\game-arena\game-arena.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */]) === "function" && _b || Object])
     ], GameArenaPage);
     return GameArenaPage;
+    var _a, _b;
 }());
 
 //# sourceMappingURL=game-arena.js.map
 
+/***/ }),
+
+/***/ 79:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ArenaServiceProvider; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(248);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+//import { GameC4 as Game } from "./connect4a";
+//import { MonteCarlo } from "./monte-carlo";
+/*
+  Generated class for the ArenaServiceProvider provider.
+
+  See https://angular.io/guide/dependency-injection for more info on providers
+  and Angular DI.
+*/
+var ArenaServiceProvider = /** @class */ (function () {
+    // game: Game;
+    // mcts: MonteCarlo;
+    // state: any;
+    // winner: Number;
+    function ArenaServiceProvider(http) {
+        this.http = http;
+        console.log('Hello ArenaServiceProvider Provider');
+    }
+    ArenaServiceProvider = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["A" /* Injectable */])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_common_http__["a" /* HttpClient */]])
+    ], ArenaServiceProvider);
+    return ArenaServiceProvider;
+}());
+
+//# sourceMappingURL=arena-service.js.map
+
 /***/ })
 
-},[199]);
+},[202]);
 //# sourceMappingURL=main.js.map

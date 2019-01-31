@@ -16,7 +16,9 @@
       <ion-col class="centering" col-12 col-sm-8 col-md-6 col-xl-4>
 
         <ion-card>
-          <img src="http://lorempixel.com/400/200/sports/"/>
+          <div class="arena-preview">
+            <connect4 [game-type]="2"></connect4>
+          </div>
           <ion-card-content>
             
             <ion-card-title>
@@ -28,7 +30,7 @@
             </p>
 
             <button ion-button (click)="startGame()"  class="btn btn-start ai">
-              Démarrer une partie AI
+              Démarrer une partie
             </button>
           </ion-card-content>
 
